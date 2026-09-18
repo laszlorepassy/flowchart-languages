@@ -1,4 +1,4 @@
-// Checks the language files of Folyamatábrázoló (languages/<code>.json)
+// Checks the language files of Folyab (languages/<code>.json)
 // against the English reference (languages/en.json). Plain Node.js, no
 // dependencies: the app's build (build.mjs) imports it, and the public
 // flowchart-languages repository runs the same file for every pull request.

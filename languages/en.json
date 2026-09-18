@@ -8,7 +8,7 @@
     ]
   },
   "messages": {
-    "appTitle": "Flowchart Designer (Folyamatábrázoló)",
+    "appTitle": "Folyab",
     "menuNew": "New",
     "menuOpen": "Open…",
     "menuSave": "Save",
@@ -199,7 +199,7 @@
     "appUpdated": "The app was updated to its newest version; your program was kept.",
     "menuHelp": "Help",
     "helpTitle": "Help",
-    "helpPageTitle": "Flowchart Designer Help (Folyamatábrázoló)",
+    "helpPageTitle": "Folyab Help",
     "labelBreakpoint": "Breakpoint (the run stops here)",
     "pausedAtBreakpoint": "Stopped at a breakpoint.",
     "examplesTitle": "New program",
@@ -677,7 +677,7 @@
     },
     "download": {
       "title": "Download the exam edition (version {version})",
-      "lead": "An installable desktop edition for tests, exams and the Hungarian érettségi. The same Flowchart Designer as here in the browser, but:",
+      "lead": "An installable desktop edition for tests, exams and the Hungarian érettségi. The same Folyab as here in the browser, but:",
       "points": [
         {
           "title": "No examples",

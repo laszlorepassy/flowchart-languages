@@ -8,7 +8,7 @@
     ]
   },
   "messages": {
-    "appTitle": "Folyamatábrázoló",
+    "appTitle": "Folyáb",
     "menuNew": "Új",
     "menuOpen": "Megnyitás…",
     "menuSave": "Mentés",
@@ -199,7 +199,7 @@
     "appUpdated": "Az alkalmazás frissült a legújabb verzióra; a programod megmaradt.",
     "menuHelp": "Súgó",
     "helpTitle": "Súgó",
-    "helpPageTitle": "Folyamatábrázoló súgó",
+    "helpPageTitle": "Folyáb súgó",
     "labelBreakpoint": "Töréspont (a futás itt megáll)",
     "pausedAtBreakpoint": "Megállt egy töréspontnál.",
     "examplesTitle": "Új program",
@@ -677,7 +677,7 @@
     },
     "download": {
       "title": "Vizsgaváltozat letöltése ({version} verzió)",
-      "lead": "Telepíthető asztali változat dolgozatokhoz, vizsgákhoz és az érettségihez. Ugyanaz a Folyamatábrázoló, mint itt a böngészőben, de:",
+      "lead": "Telepíthető asztali változat dolgozatokhoz, vizsgákhoz és az érettségihez. Ugyanaz a Folyáb, mint itt a böngészőben, de:",
       "points": [
         {
           "title": "Példák nélkül",
