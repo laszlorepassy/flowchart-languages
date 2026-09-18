@@ -1,0 +1,714 @@
+{
+  "language": {
+    "code": "en",
+    "name": "English",
+    "nativeName": "English",
+    "translators": [
+      "Répássy László"
+    ]
+  },
+  "messages": {
+    "appTitle": "Flowchart Designer (Folyamatábrázoló)",
+    "menuNew": "New",
+    "menuOpen": "Open…",
+    "menuSave": "Save",
+    "menuSaveAs": "Save As…",
+    "menuExportImage": "Export Image",
+    "generateCode": "Generate Source Code",
+    "programNamePlaceholder": "Program name",
+    "clipboardHint": "right-click a connector to paste, or click here to cancel",
+    "run": "Run",
+    "step": "Step",
+    "pause": "Pause",
+    "reset": "Reset",
+    "speed": "Speed",
+    "speedSlowest": "Slowest",
+    "speedSlow": "Slow",
+    "speedNormal": "Normal",
+    "speedFast": "Fast",
+    "speedFastest": "Fastest",
+    "tabVariables": "Variables",
+    "tabConsole": "Console",
+    "tabCode": "Code",
+    "tabFiles": "Files",
+    "varName": "Name",
+    "varType": "Type",
+    "varValue": "Value",
+    "consolePlaceholder": "Program output appears here…",
+    "inputPromptDefault": "Enter a value for",
+    "submit": "Submit",
+    "copyCode": "Copy",
+    "downloadCode": "Download",
+    "pseudocode": "Pseudocode",
+    "routineMain": "Main Program",
+    "addRoutine": "+ Routine",
+    "editRoutine": "Edit routine",
+    "deleteRoutine": "Delete routine",
+    "routineName": "Name",
+    "routineKind": "Kind",
+    "kindProcedure": "Procedure",
+    "kindFunction": "Function",
+    "returnType": "Return type",
+    "parameters": "Parameters",
+    "addParameter": "+ Parameter",
+    "paramName": "Name",
+    "paramType": "Type",
+    "remove": "Remove",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "close": "Close",
+    "confirmNewProgram": "Start a new program? Unsaved changes will be lost.",
+    "confirmDeleteRoutine": "Delete this routine?",
+    "confirmDeleteBlock": "Delete this block?",
+    "insertBlock": "Insert symbol",
+    "editBlock": "Edit symbol",
+    "blockDeclare": "Declare",
+    "blockAssign": "Assign",
+    "blockInput": "Input",
+    "blockOutput": "Output",
+    "blockIf": "If",
+    "blockWhile": "While",
+    "blockDowhile": "Do While",
+    "blockFor": "For",
+    "blockCall": "Call",
+    "blockComment": "Comment",
+    "labelExpression": "Expression",
+    "labelCondition": "Condition",
+    "labelPrompt": "Prompt (optional)",
+    "labelNewline": "New line after output",
+    "labelStart": "Start Value",
+    "labelEnd": "End Value",
+    "labelStepBy": "Step Value",
+    "labelRoutineToCall": "Routine to call",
+    "labelArguments": "Arguments",
+    "labelText": "Text",
+    "labelIsArray": "Array?",
+    "labelArraySize": "Array size",
+    "labelVariable": "Variable",
+    "labelVariableNames": "Variable Names (comma-separated)",
+    "byRef": "by reference",
+    "byRefArgHint": "This parameter is by reference: enter a plain variable name here.",
+    "langLabel": "Language",
+    "resizePanel": "Drag to resize the panel",
+    "start": "Start",
+    "end": "End",
+    "branchTrue": "True",
+    "branchFalse": "False",
+    "errUndeclaredVar": "Variable \"{name}\" was not declared.",
+    "errAlreadyDeclared": "Variable \"{name}\" is already declared.",
+    "errUnknownRoutine": "Unknown routine \"{name}\".",
+    "errNotArray": "Variable \"{name}\" is not an array.",
+    "errArrayNeedsIndex": "\"{name}\" is an array — use an index, e.g. {name}[0].",
+    "errIndexOutOfRange": "Index out of range for array \"{name}\".",
+    "errByRefNeedsVariable": "Parameter \"{name}\" is by reference and needs a plain variable name as its argument.",
+    "errInvalidAssignTarget": "\"{name}\" is not a valid assignment target.",
+    "errTooManySteps": "Execution stopped: too many steps (possible infinite loop).",
+    "errDivisionByZero": "Division by zero ({operator}).",
+    "errInvalidBoolean": "\"{value}\" is not a Boolean value (use true or false).",
+    "errWrongArgCount": "\"{name}\" needs {expected} argument(s), but got {actual}.",
+    "errParamTypeMismatch": "The by-reference parameter \"{param}\" is {expected}, but the variable passed is {actual}.",
+    "errNotAFunction": "\"{name}\" is a procedure: it has no value, call it with a Call symbol.",
+    "errStackOverflow": "Too many nested calls (runaway recursion?).",
+    "errForStepZero": "The step of a For loop can't be 0.",
+    "errInvalidArraySize": "Invalid array size: {value} (0 to 1000000).",
+    "errInvalidNumber": "\"{value}\" is not a number.",
+    "errFileNotOpen": "The file \"{name}\" is not open (use an Open File symbol first).",
+    "errFileAlreadyOpen": "The file \"{name}\" is already open.",
+    "errFileNotFound": "There is no file named \"{name}\" — upload or create it on the Files tab.",
+    "errFileNotReadable": "The file \"{name}\" is open for writing, not reading.",
+    "errFileNotWritable": "The file \"{name}\" is open for reading, not writing.",
+    "errFileEnd": "No more lines to read in \"{name}\" (end of file) — check eof(\"{name}\") first.",
+    "errNotStruct": "\".{name}\" can only follow a struct value.",
+    "errUnknownField": "Unknown struct field: {name}.",
+    "errTypeMismatch": "Type mismatch: {name}.",
+    "errUnknownType": "Unknown type \"{name}\".",
+    "errRecursiveStruct": "Struct \"{name}\" contains itself.",
+    "errInputNeedsSimpleTarget": "Input can only read into a simple variable, array element or field, not \"{name}\".",
+    "errParse": "Expression error: {message}",
+    "errRuntime": "Runtime error",
+    "errGeneric": "Error",
+    "programFinished": "Program finished.",
+    "programStopped": "Program stopped.",
+    "waitingForInput": "Waiting for input…",
+    "nothingToRun": "Nothing to run yet — build a flowchart first.",
+    "fileLoadError": "Could not read this file — it may not be a valid .flow or Flowgorithm .fprg file.",
+    "duplicateRoutineName": "This name is already used by a routine, a struct or a type.",
+    "invalidName": "Please enter a valid name (letters, digits, underscore, starting with a letter).",
+    "fitToScreen": "Fit",
+    "addStruct": "+ Struct",
+    "editStruct": "Edit struct",
+    "structFields": "Fields",
+    "addField": "+ Field",
+    "confirmDeleteStruct": "Delete this struct?",
+    "structInUse": "The struct \"{name}\" is still used (by a variable, parameter, return type or another struct), so it can't be deleted.",
+    "invalidFieldName": "Every field needs a valid name (letters, digits, underscore, starting with a letter).",
+    "duplicateFieldName": "Two fields have the same name.",
+    "invalidVariableName": "\"{name}\" can't be a name: use a letter first, then letters, digits or _, and not a reserved word or built-in function name.",
+    "duplicateParamName": "Two parameters have the same name.",
+    "paramNamedLikeRoutine": "A parameter can't have the routine's own name.",
+    "routineInUse": "The routine \"{name}\" is still called somewhere, so it can't be deleted.",
+    "structTabTitle": "Struct — click to edit",
+    "blockBreakpoint": "Breakpoint",
+    "labelBreakpointCondition": "Stop only when (optional condition, e.g. i = 4)",
+    "labelFileNameOptional": "File name (empty: the last opened file)",
+    "importSkipped": "These parts of the Flowgorithm file aren't supported and were left out: {list}.",
+    "turtleGraphics": "turtle graphics",
+    "blockFileopen": "Open File",
+    "blockFileread": "Read from File",
+    "blockFilewrite": "Write to File",
+    "blockFileclose": "Close File",
+    "fileOpenShort": "Open",
+    "fileReadShort": "Read",
+    "fileWriteShort": "Write",
+    "fileCloseShort": "Close",
+    "labelFileName": "File name (a String, e.g. \"file-a\")",
+    "labelFileMode": "Open for",
+    "fileMode_read": "reading",
+    "fileMode_write": "writing (overwrite)",
+    "fileMode_append": "appending",
+    "fileModeShort_read": "read",
+    "fileModeShort_write": "write",
+    "fileModeShort_append": "append",
+    "filesIntro": "Text files your programs read and write by name, e.g. \"file-a\" — kept in this browser. Files a program creates appear here too.",
+    "filesEmpty": "No files yet — upload one or create a new file.",
+    "filesUpload": "Upload…",
+    "filesNew": "+ New file",
+    "filesDownload": "Download",
+    "filesEdit": "Open",
+    "filesDelete": "Delete",
+    "filesLine": "{count} line",
+    "filesLines": "{count} lines",
+    "fileEditTitle": "File",
+    "fileContent": "Content",
+    "fileNameLabel": "Name",
+    "confirmDeleteFile": "Delete the file \"{name}\"?",
+    "confirmOverwriteFile": "A file named \"{name}\" already exists. Replace it?",
+    "invalidFileName": "Use letters, digits, space, dot, dash or underscore in a file name.",
+    "fileNameTaken": "A file with this name already exists.",
+    "filesStorageFull": "The browser storage is full: the files are kept only until the page is closed. Download what you need.",
+    "emptyProject": "Empty project",
+    "examModeBadge": "exam mode",
+    "backToApp": "Back to the app",
+    "enlargeCode": "Enlarge",
+    "versionLabel": "version {version} ({date})",
+    "versionDevelopment": "development version",
+    "copyrightNotice": "© 2026 László Répássy. All rights reserved.",
+    "translatedBy": "Translation: {names}",
+    "appUpdated": "The app was updated to its newest version; your program was kept.",
+    "menuHelp": "Help",
+    "helpTitle": "Help",
+    "helpPageTitle": "Flowchart Designer Help (Folyamatábrázoló)",
+    "labelBreakpoint": "Breakpoint (the run stops here)",
+    "pausedAtBreakpoint": "Stopped at a breakpoint.",
+    "examplesTitle": "New program",
+    "examplesIntro": "Pick an example: its program is loaded and can be edited and continued like your own.",
+    "confirmLoadExample": "Load this example? The current program will be replaced (unsaved changes will be lost)."
+  },
+  "help": {
+    "sections": [
+      {
+        "title": "Adding symbols",
+        "content": [
+          "Click any arrow (connector) in the flowchart: a symbol picker opens, and the symbol you pick is inserted there.",
+          "The new symbol opens for editing right away. In every popup, Enter presses the default (blue) button, e.g. Save or OK; Esc closes the popup."
+        ]
+      },
+      {
+        "title": "Editing and deleting",
+        "content": [
+          "Click a symbol to edit it. Use the Delete button in its editor to remove it."
+        ]
+      },
+      {
+        "title": "Right mouse button: cut and paste",
+        "content": [
+          [
+            "Right-click a symbol to cut it (an If or loop moves together with everything inside it). A badge in the header shows what was cut.",
+            "Right-click an arrow to paste it there. With nothing cut, the symbol picker opens instead.",
+            "Click the badge in the header to discard the cut symbol (it is then lost)."
+          ]
+        ]
+      },
+      {
+        "title": "Procedures and functions",
+        "content": [
+          "Use the \"+ Routine\" tab to create a procedure or function with parameters; edit it with the ✎ icon. Call it with a Call symbol or from an expression, e.g. Double(n).",
+          "A function's return value is the value of the variable named after the function when it ends. A parameter marked \"by reference\" changes the caller's variable; arrays are always passed by reference."
+        ]
+      },
+      {
+        "title": "Structs (records)",
+        "content": [
+          "Use \"+ Struct\" to create your own type with a name and fields (e.g. Point: x, y). A field can be of a basic type or another struct. Click a struct's tab to edit, rename or delete it.",
+          "A struct can be chosen anywhere a type is: in Declare (also as an array), for parameters and as a function's return type. Access fields with a dot: p.x, t[i].name, r.corner.x — in expressions, assignments and Input.",
+          "Assignment (b = a) and by-value parameters copy the struct; a by-reference parameter changes the original."
+        ]
+      },
+      {
+        "title": "Files",
+        "content": [
+          [
+            "On the Files tab you can upload files, create new ones, view and edit their content, rename, download and delete them. Files are kept in this browser.",
+            "A program refers to a file by its name, as a String: \"file-a\". Symbols: Open File (for reading, writing or appending), Read from File (reads one line into a variable), Write to File, Close File.",
+            "eof(\"file-a\") is true when a file open for reading has no more lines — e.g. a loop: while not eof(\"file-a\"). Read, Write, Close and EOF() may leave the file name out: then they use the most recently opened file (the way Flowgorithm handles files).",
+            "Opening a file for writing creates (or overwrites) it; what the program creates appears on the Files tab right away, ready to download."
+          ]
+        ]
+      },
+      {
+        "title": "Running",
+        "content": [
+          [
+            "▶ Run executes the program; the symbol being executed is highlighted in blue. Set the pace with the Speed selector.",
+            "⏸ Pause stops the run; continue with ▶ or ⏭.",
+            "⟲ Reset starts over and clears the console and variables.",
+            "An Input symbol asks for a value on the Console tab; the program waits until you enter it."
+          ]
+        ]
+      },
+      {
+        "title": "Stepping",
+        "content": [
+          "The ⏭ Step button executes one symbol at a time. Follow the current variable values on the Variables tab and the output on the Console tab. You can switch to ▶ Run at any time."
+        ]
+      },
+      {
+        "title": "Debugging",
+        "content": [
+          [
+            "Breakpoint: Shift + click a symbol, or tick \"Breakpoint\" in its editor. A red dot in the corner of the symbol marks it.",
+            "When running, the program stops at a breakpoint before executing that symbol, and switches to the Variables tab.",
+            "Variables changed by the last step are highlighted in yellow.",
+            "Continue step by step (⏭) or to the next breakpoint (▶).",
+            "Breakpoint symbol (as in Flowgorithm): the run stops when it gets there — with a condition (e.g. i = 4), only when the condition is true.",
+            "On a runtime error, the symbol that caused it is highlighted and the message appears in the console."
+          ]
+        ]
+      },
+      {
+        "title": "Expressions",
+        "content": [
+          [
+            "Arrays: t[i], indexed from 0. Struct fields: p.x, t[i].name.",
+            "Strings in quotes: \"apple\" or 'apple' (no escape sequences; \\ is an ordinary character).",
+            "Names (variables, routines) start with a letter and contain letters and digits; case doesn't matter.",
+            "The full list of operators and functions is in the tables below."
+          ]
+        ]
+      },
+      {
+        "title": "View",
+        "content": [
+          "Use the bottom-right controls to zoom in (+), zoom out (−) or fit the whole diagram (⛶). Drag the empty background to scroll. Drag the divider between the diagram and the side panel to set the panel width — this browser remembers it. Popups can be moved by dragging their title (or any empty part of them)."
+        ]
+      },
+      {
+        "title": "Files, examples, source code",
+        "content": [
+          [
+            "The Files tab manages the data files programs read and write (see Files).",
+            "Save: to a .flow file. Open: a .flow file, or a .fprg file made with Flowgorithm (anything the app doesn't support, e.g. turtle graphics, is reported). Your program is also kept in this browser.",
+            "Updates: when a new version of the app comes out, the page updates itself as soon as no program is running and no dialog is open — the open program and the view are kept.",
+            "The buttons in the header are icon-only (New, Open, Save, Export Image, then the run controls): hover over one to see which is which. Export Image makes a PNG image of the flowchart.",
+            "New: the window shown at start — an empty project or ready-made examples (algorithms, structs, files); a loaded example can be edited and continued as if you had written it.",
+            "The Code tab generates Python, C++ or C# source code from the program — highlighted, with line numbers; Enlarge shows it in a big window.",
+            "Pseudocode writes the program in the app's language: in English, the pseudocode of Cambridge International AS & A Level Computer Science (DECLARE, IF … THEN … ENDIF, FOR … NEXT, PROCEDURE, FUNCTION … RETURNS); in Hungarian, the mondatszerű leírás taught at ELTE. Arrays and strings are indexed from 0 here too, as in the flowchart."
+          ]
+        ]
+      },
+      {
+        "title": "Operators (as documented by Flowgorithm)",
+        "table": {
+          "head": [
+            "Operation",
+            "C family",
+            "BASIC family",
+            "Mathematics (Unicode)"
+          ],
+          "rows": [
+            [
+              "Equal",
+              "==",
+              "=",
+              "="
+            ],
+            [
+              "Not equal",
+              "!=",
+              "<>",
+              "≠"
+            ],
+            [
+              "Less / greater",
+              "<  >",
+              "<  >",
+              "<  >"
+            ],
+            [
+              "Less or equal",
+              "<=",
+              "<=",
+              "≤"
+            ],
+            [
+              "Greater or equal",
+              ">=",
+              ">=",
+              "≥"
+            ],
+            [
+              "Logical not",
+              "!",
+              "not",
+              "¬"
+            ],
+            [
+              "Logical and",
+              "&&",
+              "and",
+              "∧"
+            ],
+            [
+              "Logical or",
+              "||",
+              "or",
+              "∨"
+            ],
+            [
+              "Multiply",
+              "*",
+              "*",
+              "×"
+            ],
+            [
+              "Divide (always real)",
+              "/",
+              "/",
+              "÷"
+            ],
+            [
+              "Remainder",
+              "%",
+              "mod",
+              ""
+            ],
+            [
+              "Add, subtract",
+              "+  -",
+              "+  -",
+              ""
+            ],
+            [
+              "String concatenation",
+              "",
+              "&",
+              ""
+            ],
+            [
+              "Exponent",
+              "",
+              "^",
+              "↑"
+            ],
+            [
+              "Integer division (this app's addition)",
+              "",
+              "div",
+              ""
+            ]
+          ],
+          "codeColumns": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "title": "Precedence (strongest first)",
+        "table": {
+          "head": [
+            "Level",
+            "Operators",
+            "Note"
+          ],
+          "rows": [
+            [
+              "8 – unary",
+              "-  !  not  ¬",
+              "-2 ^ 2 = 4"
+            ],
+            [
+              "7 – exponent",
+              "^  ↑",
+              "right-associative: 2 ^ 3 ^ 2 = 512"
+            ],
+            [
+              "6 – multiply",
+              "*  ×  /  ÷  %  mod  div",
+              "6 / 3 * 2 = 4 (left to right)"
+            ],
+            [
+              "5 – addition",
+              "+  -",
+              ""
+            ],
+            [
+              "4 – concatenate",
+              "&",
+              "\"n=\" & 1 + 2 → \"n=3\""
+            ],
+            [
+              "3 – relational",
+              "=  ==  <>  !=  ≠  <  >  <=  ≤  >=  ≥",
+              "not chainable (instead of 1 < x < 5: 1 < x and x < 5)"
+            ],
+            [
+              "2 – and",
+              "and  &&  ∧",
+              ""
+            ],
+            [
+              "1 – or",
+              "or  ||  ∨",
+              ""
+            ]
+          ],
+          "codeColumns": [
+            1
+          ]
+        }
+      },
+      {
+        "title": "Intrinsic functions",
+        "table": {
+          "head": [
+            "Function",
+            "Description",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Abs(n)",
+              "absolute value",
+              "Abs(-3) → 3"
+            ],
+            [
+              "Sqrt(n)",
+              "square root",
+              "Sqrt(16) → 4"
+            ],
+            [
+              "Sin(n), Cos(n), Tan(n)",
+              "trigonometry (radians)",
+              "Cos(0) → 1"
+            ],
+            [
+              "Arcsin(n), Arccos(n), Arctan(n)",
+              "inverse trigonometry",
+              "Arctan(1) → 0.785…"
+            ],
+            [
+              "Ln(n), Log(n)",
+              "natural logarithm",
+              "Ln(1) → 0"
+            ],
+            [
+              "Log10(n)",
+              "base-10 logarithm",
+              "Log10(1000) → 3"
+            ],
+            [
+              "Int(n)",
+              "whole part (drops the fraction)",
+              "Int(3.9) → 3"
+            ],
+            [
+              "Sgn(n)",
+              "sign: -1, 0 or 1",
+              "Sgn(-5) → -1"
+            ],
+            [
+              "Random(n)",
+              "random integer from 0 to n-1",
+              "Random(6) + 1 → a die"
+            ],
+            [
+              "Len(s)",
+              "length of a string",
+              "Len(\"apple\") → 5"
+            ],
+            [
+              "Char(s, i)",
+              "character i of a string, counted from 0",
+              "Char(\"apple\", 0) → \"a\""
+            ],
+            [
+              "ToChar(n)",
+              "character from a character code",
+              "ToChar(65) → \"A\""
+            ],
+            [
+              "ToCode(c)",
+              "character code of a character",
+              "ToCode(\"A\") → 65"
+            ],
+            [
+              "ToFixed(r, i)",
+              "real number as a string with i decimals",
+              "ToFixed(3.14159, 2) → \"3.14\""
+            ],
+            [
+              "ToInteger(s)",
+              "integer from a string",
+              "ToInteger(\"42\") → 42"
+            ],
+            [
+              "ToReal(s)",
+              "real from a string",
+              "ToReal(\"2.5\") → 2.5"
+            ],
+            [
+              "ToString(n)",
+              "string from a number",
+              "ToString(12) & \"!\" → \"12!\""
+            ],
+            [
+              "Size(t)",
+              "number of elements of an array",
+              "Size(t)"
+            ],
+            [
+              "EOF()  /  eof(\"file\")",
+              "true at the end of a file open for reading (no name: the most recently opened file)",
+              "while not EOF()"
+            ]
+          ],
+          "codeColumns": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "title": "This app's extra functions (not part of Flowgorithm)",
+        "table": {
+          "head": [
+            "Function",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Random(a, b)",
+              "random integer from a to b (inclusive)"
+            ],
+            [
+              "Round(n), Floor(n), Ceil(n), Trunc(n)",
+              "rounding: nearest, down, up, toward zero"
+            ],
+            [
+              "Min(a, b, …), Max(a, b, …)",
+              "smallest, largest"
+            ],
+            [
+              "Pow(a, b)",
+              "power, like ^"
+            ],
+            [
+              "Left(s, n), Right(s, n), Mid(s, start, length)",
+              "substrings (Mid counts from 0)"
+            ],
+            [
+              "Upper(s), Lower(s), Trim(s)",
+              "upper case, lower case, trim spaces"
+            ],
+            [
+              "Length(x)",
+              "length of a string or size of an array"
+            ],
+            [
+              "Sign(n), Asin(n), Acos(n), Atan(n), Ascii(c)",
+              "other names of Sgn, Arcsin, Arccos, Arctan, ToCode"
+            ]
+          ],
+          "codeColumns": [
+            0
+          ]
+        }
+      },
+      {
+        "title": "Constants and reserved words",
+        "table": {
+          "head": [
+            "Group",
+            "Words"
+          ],
+          "rows": [
+            [
+              "Constants",
+              "True, False, pi (π)"
+            ],
+            [
+              "Reserved words",
+              "and, or, not, mod, div, true, false, pi"
+            ],
+            [
+              "Type names",
+              "Integer, Real, String, Boolean"
+            ],
+            [
+              "Not allowed as a routine or struct name",
+              "the words above and the names of built-in functions (e.g. Len, Max, ToString)"
+            ]
+          ],
+          "codeColumns": [
+            1
+          ]
+        }
+      }
+    ],
+    "examReplacements": {
+      "Files, examples, source code": "Files, source code",
+      "New:": "New: starts an empty program (exam mode has no built-in examples).",
+      "Updates:": "Exam mode: this is the installed edition for tests and exams, working without an internet connection. It has no built-in examples and never looks for updates.",
+      "Save:": "Save: to a .flow file. Open: a .flow file, or a .fprg file made with Flowgorithm (anything the app doesn't support, e.g. turtle graphics, is reported). The open program is also kept when the app is closed, and comes back the next time."
+    },
+    "download": {
+      "title": "Download the exam edition (version {version})",
+      "lead": "An installable desktop edition for tests, exams and the Hungarian érettségi. The same Flowchart Designer as here in the browser, but:",
+      "points": [
+        {
+          "title": "No examples",
+          "text": "no built-in samples or ready-made programs; New always starts an empty program"
+        },
+        {
+          "title": "Fully offline",
+          "text": "runs without an internet connection, downloads nothing and never looks for updates"
+        },
+        {
+          "title": "Made for exams",
+          "text": "runs in a window of its own, no browser needed; the help is included"
+        }
+      ],
+      "action": "Download",
+      "appImage": {
+        "label": "Linux · AppImage",
+        "note": "no installation, any distribution: make it executable (chmod +x), then run it"
+      },
+      "deb": {
+        "label": "Linux · .deb package",
+        "note": "Debian, Ubuntu, Linux Mint: sudo apt install ./{file}"
+      },
+      "exe": {
+        "label": "Windows · .exe installer",
+        "note": "Windows 10 and 11 (64-bit); if SmartScreen warns: More info, then Run anyway"
+      },
+      "msi": {
+        "label": "Windows · .msi package",
+        "note": "for school machines and administrators: silent or central install, e.g. msiexec /i {file} /qn"
+      }
+    }
+  }
+}

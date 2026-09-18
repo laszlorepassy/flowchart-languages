@@ -1,0 +1,714 @@
+{
+  "language": {
+    "code": "hu",
+    "name": "Hungarian",
+    "nativeName": "Magyar",
+    "translators": [
+      "Répássy László"
+    ]
+  },
+  "messages": {
+    "appTitle": "Folyamatábrázoló",
+    "menuNew": "Új",
+    "menuOpen": "Megnyitás…",
+    "menuSave": "Mentés",
+    "menuSaveAs": "Mentés másként…",
+    "menuExportImage": "Kép exportálása",
+    "generateCode": "Forráskód generálása",
+    "programNamePlaceholder": "Program neve",
+    "clipboardHint": "jobb kattintás egy nyílra a beillesztéshez, vagy kattints ide a törléshez",
+    "run": "Futtatás",
+    "step": "Lépés",
+    "pause": "Szünet",
+    "reset": "Visszaállítás",
+    "speed": "Sebesség",
+    "speedSlowest": "Leglassabb",
+    "speedSlow": "Lassú",
+    "speedNormal": "Normál",
+    "speedFast": "Gyors",
+    "speedFastest": "Leggyorsabb",
+    "tabVariables": "Változók",
+    "tabConsole": "Konzol",
+    "tabCode": "Kód",
+    "tabFiles": "Fájlok",
+    "varName": "Név",
+    "varType": "Típus",
+    "varValue": "Érték",
+    "consolePlaceholder": "A program kimenete itt jelenik meg…",
+    "inputPromptDefault": "Adj meg egy értéket ehhez:",
+    "submit": "Küldés",
+    "copyCode": "Másolás",
+    "downloadCode": "Letöltés",
+    "pseudocode": "Pszeudokód",
+    "routineMain": "Főprogram",
+    "addRoutine": "+ Eljárás",
+    "editRoutine": "Eljárás szerkesztése",
+    "deleteRoutine": "Eljárás törlése",
+    "routineName": "Név",
+    "routineKind": "Típus",
+    "kindProcedure": "Eljárás",
+    "kindFunction": "Függvény",
+    "returnType": "Visszatérési típus",
+    "parameters": "Paraméterek",
+    "addParameter": "+ Paraméter",
+    "paramName": "Név",
+    "paramType": "Típus",
+    "remove": "Eltávolítás",
+    "ok": "OK",
+    "cancel": "Mégse",
+    "save": "Mentés",
+    "delete": "Törlés",
+    "close": "Bezárás",
+    "confirmNewProgram": "Új program létrehozása? A nem mentett módosítások elvesznek.",
+    "confirmDeleteRoutine": "Törlöd ezt az eljárást?",
+    "confirmDeleteBlock": "Törlöd ezt az elemet?",
+    "insertBlock": "Szimbólum beszúrása",
+    "editBlock": "Szimbólum szerkesztése",
+    "blockDeclare": "Deklarálás",
+    "blockAssign": "Értékadás",
+    "blockInput": "Beolvasás",
+    "blockOutput": "Kiírás",
+    "blockIf": "Elágazás",
+    "blockWhile": "Ciklus (elöltesztelt)",
+    "blockDowhile": "Ciklus (hátultesztelt)",
+    "blockFor": "Számláló ciklus",
+    "blockCall": "Hívás",
+    "blockComment": "Megjegyzés",
+    "labelExpression": "Kifejezés",
+    "labelCondition": "Feltétel",
+    "labelPrompt": "Felirat (opcionális)",
+    "labelNewline": "Új sor a kiírás után",
+    "labelStart": "Kezdő érték",
+    "labelEnd": "Záró érték",
+    "labelStepBy": "Lépésköz",
+    "labelRoutineToCall": "Hívandó eljárás",
+    "labelArguments": "Argumentumok",
+    "labelText": "Szöveg",
+    "labelIsArray": "Tömb?",
+    "labelArraySize": "Tömb mérete",
+    "labelVariable": "Változó",
+    "labelVariableNames": "Változónevek (vesszővel elválasztva)",
+    "byRef": "cím szerint",
+    "byRefArgHint": "Ez a paraméter cím szerinti — ide egy egyszerű változónevet írj.",
+    "langLabel": "Nyelv",
+    "resizePanel": "Húzd el a panel átméretezéséhez",
+    "start": "Kezdés",
+    "end": "Vége",
+    "branchTrue": "Igaz",
+    "branchFalse": "Hamis",
+    "errUndeclaredVar": "A(z) \"{name}\" változó nincs deklarálva.",
+    "errAlreadyDeclared": "A(z) \"{name}\" változó már deklarálva van.",
+    "errUnknownRoutine": "Ismeretlen eljárás: \"{name}\".",
+    "errNotArray": "A(z) \"{name}\" nem tömb.",
+    "errArrayNeedsIndex": "A(z) \"{name}\" egy tömb — indexet kell használni, pl. {name}[0].",
+    "errIndexOutOfRange": "Az index kívül esik a(z) \"{name}\" tömb határain.",
+    "errByRefNeedsVariable": "A(z) \"{name}\" paraméter cím szerinti, ezért az argumentumnak egy egyszerű változónévnek kell lennie.",
+    "errInvalidAssignTarget": "A(z) \"{name}\" nem érvényes értékadási cél.",
+    "errTooManySteps": "A végrehajtás leállt: túl sok lépés (talán végtelen ciklus).",
+    "errDivisionByZero": "Nullával való osztás ({operator}).",
+    "errInvalidBoolean": "A(z) \"{value}\" nem logikai érték (írj true-t vagy false-t).",
+    "errWrongArgCount": "A(z) \"{name}\" {expected} argumentumot vár, de {actual} érkezett.",
+    "errParamTypeMismatch": "A(z) \"{param}\" cím szerinti paraméter típusa {expected}, de az átadott változóé {actual}.",
+    "errNotAFunction": "A(z) \"{name}\" eljárás: nincs értéke, Hívás szimbólummal hívd meg.",
+    "errStackOverflow": "Túl sok egymásba ágyazott hívás (végtelen rekurzió?).",
+    "errForStepZero": "A számláló ciklus lépésköze nem lehet 0.",
+    "errInvalidArraySize": "Érvénytelen tömbméret: {value} (0 és 1000000 között).",
+    "errInvalidNumber": "A(z) \"{value}\" nem szám.",
+    "errFileNotOpen": "A(z) \"{name}\" fájl nincs megnyitva (előbb használj Fájl megnyitása szimbólumot).",
+    "errFileAlreadyOpen": "A(z) \"{name}\" fájl már meg van nyitva.",
+    "errFileNotFound": "Nincs \"{name}\" nevű fájl — töltsd fel vagy hozd létre a Fájlok fülön.",
+    "errFileNotReadable": "A(z) \"{name}\" fájl írásra van megnyitva, nem olvasásra.",
+    "errFileNotWritable": "A(z) \"{name}\" fájl olvasásra van megnyitva, nem írásra.",
+    "errFileEnd": "A(z) \"{name}\" fájlban nincs több olvasható sor (fájl vége) — előbb vizsgáld: eof(\"{name}\").",
+    "errNotStruct": "A \".{name}\" csak struktúra értéke után állhat.",
+    "errUnknownField": "Ismeretlen struktúramező: {name}.",
+    "errTypeMismatch": "Típuseltérés: {name}.",
+    "errUnknownType": "Ismeretlen típus: \"{name}\".",
+    "errRecursiveStruct": "A(z) \"{name}\" struktúra önmagát tartalmazza.",
+    "errInputNeedsSimpleTarget": "A beolvasás csak egyszerű változóba, tömbelembe vagy mezőbe történhet, ide nem: \"{name}\".",
+    "errParse": "Kifejezés hiba: {message}",
+    "errRuntime": "Futásidejű hiba",
+    "errGeneric": "Hiba",
+    "programFinished": "A program lefutott.",
+    "programStopped": "A program leállítva.",
+    "waitingForInput": "Várakozás bevitelre…",
+    "nothingToRun": "Nincs mit futtatni — előbb készíts egy folyamatábrát.",
+    "fileLoadError": "A fájl nem olvasható — lehet, hogy nem érvényes .flow vagy Flowgorithm .fprg fájl.",
+    "duplicateRoutineName": "Ez a név már foglalt (eljárás, struktúra vagy típus).",
+    "invalidName": "Adj meg egy érvényes nevet (betűk, számok, aláhúzás, betűvel kezdve).",
+    "fitToScreen": "Illesztés",
+    "addStruct": "+ Struktúra",
+    "editStruct": "Struktúra szerkesztése",
+    "structFields": "Mezők",
+    "addField": "+ Mező",
+    "confirmDeleteStruct": "Törlöd ezt a struktúrát?",
+    "structInUse": "A(z) \"{name}\" struktúrát még használja egy változó, paraméter, visszatérési típus vagy másik struktúra, ezért nem törölhető.",
+    "invalidFieldName": "Minden mezőnek érvényes nevet adj (betűk, számok, aláhúzás, betűvel kezdve).",
+    "duplicateFieldName": "Két mezőnek ugyanaz a neve.",
+    "invalidVariableName": "A(z) \"{name}\" nem lehet név: betűvel kezdődjön, utána betű, szám vagy _ jöhet, és ne legyen foglalt szó vagy beépített függvény neve.",
+    "duplicateParamName": "Két paraméternek ugyanaz a neve.",
+    "paramNamedLikeRoutine": "Paraméter nem kaphatja az eljárás saját nevét.",
+    "routineInUse": "A(z) \"{name}\" eljárást még meghívja valami, ezért nem törölhető.",
+    "structTabTitle": "Struktúra — kattints a szerkesztéshez",
+    "blockBreakpoint": "Töréspont",
+    "labelBreakpointCondition": "Csak akkor álljon meg, ha (nem kötelező feltétel, pl. i = 4)",
+    "labelFileNameOptional": "Fájl neve (üresen: a legutóbb megnyitott fájl)",
+    "importSkipped": "A Flowgorithm-fájl alábbi részeit az alkalmazás nem támogatja, ezért kimaradtak: {list}.",
+    "turtleGraphics": "teknőcgrafika",
+    "blockFileopen": "Fájl megnyitása",
+    "blockFileread": "Olvasás fájlból",
+    "blockFilewrite": "Írás fájlba",
+    "blockFileclose": "Fájl bezárása",
+    "fileOpenShort": "Megnyit",
+    "fileReadShort": "Olvas",
+    "fileWriteShort": "Ír",
+    "fileCloseShort": "Bezár",
+    "labelFileName": "Fájl neve (szöveg, pl. \"file-a\")",
+    "labelFileMode": "Megnyitás módja",
+    "fileMode_read": "olvasásra",
+    "fileMode_write": "írásra (felülírja)",
+    "fileMode_append": "hozzáfűzésre",
+    "fileModeShort_read": "olvas",
+    "fileModeShort_write": "ír",
+    "fileModeShort_append": "hozzáfűz",
+    "filesIntro": "Szövegfájlok, amelyeket a programok a nevükkel (pl. \"file-a\") olvashatnak és írhatnak. A böngészőben tárolódnak; a program által létrehozott fájlok is itt jelennek meg.",
+    "filesEmpty": "Még nincs fájl — tölts fel egyet, vagy hozz létre új fájlt.",
+    "filesUpload": "Feltöltés…",
+    "filesNew": "+ Új fájl",
+    "filesDownload": "Letöltés",
+    "filesEdit": "Megnyitás",
+    "filesDelete": "Törlés",
+    "filesLine": "{count} sor",
+    "filesLines": "{count} sor",
+    "fileEditTitle": "Fájl",
+    "fileContent": "Tartalom",
+    "fileNameLabel": "Név",
+    "confirmDeleteFile": "Törlöd a(z) \"{name}\" fájlt?",
+    "confirmOverwriteFile": "Már van \"{name}\" nevű fájl. Lecseréled?",
+    "invalidFileName": "A fájlnévben betűk, számok, szóköz, pont, kötőjel és aláhúzás lehet.",
+    "fileNameTaken": "Már van ilyen nevű fájl.",
+    "filesStorageFull": "Megtelt a böngésző tárhelye: a fájlok csak az oldal bezárásáig maradnak meg. Töltsd le, amire szükséged van.",
+    "emptyProject": "Üres projekt",
+    "examModeBadge": "dolgozat üzemmód",
+    "backToApp": "Vissza az alkalmazáshoz",
+    "enlargeCode": "Nagyítás",
+    "versionLabel": "verzió: {version} ({date})",
+    "versionDevelopment": "fejlesztői változat",
+    "copyrightNotice": "© 2026 Répássy László. Minden jog fenntartva.",
+    "translatedBy": "Fordítás: {names}",
+    "appUpdated": "Az alkalmazás frissült a legújabb verzióra; a programod megmaradt.",
+    "menuHelp": "Súgó",
+    "helpTitle": "Súgó",
+    "helpPageTitle": "Folyamatábrázoló súgó",
+    "labelBreakpoint": "Töréspont (a futás itt megáll)",
+    "pausedAtBreakpoint": "Megállt egy töréspontnál.",
+    "examplesTitle": "Új program",
+    "examplesIntro": "Válassz egy példát: a program betöltődik, és ugyanúgy szerkesztheted és folytathatod, mintha te írtad volna.",
+    "confirmLoadExample": "Betöltöd ezt a példát? A jelenlegi program helyére kerül (a nem mentett módosítások elvesznek)."
+  },
+  "help": {
+    "sections": [
+      {
+        "title": "Elemek hozzáadása",
+        "content": [
+          "Kattints a folyamatábra bármelyik nyilára (összekötő vonalára): feljön a szimbólumválasztó, és a kiválasztott elem arra a helyre kerül.",
+          "Az új elem rögtön megnyílik szerkesztésre. Minden felugró ablakban az Enter az alapértelmezett (kék) gombot nyomja meg, pl. Mentés vagy OK; az Esc bezárja az ablakot."
+        ]
+      },
+      {
+        "title": "Szerkesztés és törlés",
+        "content": [
+          "Kattints egy szimbólumra a szerkesztéshez. A szerkesztőablak Törlés gombjával törölheted."
+        ]
+      },
+      {
+        "title": "Jobb egérgomb: kivágás és beillesztés",
+        "content": [
+          [
+            "Jobb klikk egy szimbólumon: kivágja (egy elágazás vagy ciklus a teljes tartalmával együtt kerül át). A fejlécben megjelenik a kivágott elem jelzése.",
+            "Jobb klikk egy nyílon: oda illeszti be a kivágott elemet. Ha nincs kivágott elem, a szimbólumválasztó jelenik meg.",
+            "A fejlécben lévő jelzésre kattintva elveted a kivágott elemet (ilyenkor az elem elvész)."
+          ]
+        ]
+      },
+      {
+        "title": "Eljárások és függvények",
+        "content": [
+          "A „+ Eljárás” füllel hozhatsz létre eljárást vagy függvényt paraméterekkel; a ✎ ikonnal szerkesztheted. Hívni a Hívás szimbólummal vagy kifejezésből lehet, pl. Dupla(n).",
+          "A függvény visszatérési értéke a függvénnyel azonos nevű változó értéke a függvény végén. A „cím szerint” jelölt paraméter a hívó változóját módosítja; a tömbök mindig cím szerint adódnak át."
+        ]
+      },
+      {
+        "title": "Struktúrák (rekordok)",
+        "content": [
+          "A „+ Struktúra” gombbal saját típust hozhatsz létre névvel és mezőkkel (pl. Pont: x, y). Egy mező típusa alaptípus vagy egy másik struktúra is lehet. A struktúra fülére kattintva szerkesztheted, átnevezheted vagy törölheted.",
+          "A struktúra típusként bárhol választható: deklarációnál (tömbként is), paraméternél, függvény visszatérési típusánál. A mezőkre ponttal hivatkozol: p.x, t[i].nev, a.sarok.x — kifejezésben, értékadásban és beolvasásban is.",
+          "Az értékadás (b = a) és az érték szerinti paraméter másolatot készít; a cím szerinti paraméter az eredetit módosítja."
+        ]
+      },
+      {
+        "title": "Fájlok",
+        "content": [
+          [
+            "A Fájlok fülön tölthetsz fel fájlokat, hozhatsz létre újat, megnézheted és szerkesztheted a tartalmukat, átnevezheted, letöltheted és törölheted őket. A fájlok a böngészőben tárolódnak.",
+            "A programból a fájlokra a nevükkel hivatkozol, szövegként: \"file-a\". Szimbólumok: Fájl megnyitása (olvasásra, írásra vagy hozzáfűzésre), Olvasás fájlból (egy sort olvas egy változóba), Írás fájlba, Fájl bezárása.",
+            "Az eof(\"file-a\") függvény igaz, ha az olvasásra megnyitott fájlban nincs több sor — pl. ciklus: amíg not eof(\"file-a\"). Olvasásnál, írásnál, bezárásnál és az EOF()-nál a fájlnév el is hagyható: ilyenkor a legutóbb megnyitott fájlra vonatkozik (a Flowgorithm így kezeli a fájlokat).",
+            "Az írásra megnyitott fájl létrejön (vagy felülíródik); amit a program létrehoz, az azonnal megjelenik a Fájlok fülön, és onnan letöltheted."
+          ]
+        ]
+      },
+      {
+        "title": "Futtatás",
+        "content": [
+          [
+            "▶ Futtatás: végrehajtja a programot; az éppen végrehajtott szimbólum kék kiemelést kap. A tempót a Sebesség választóval állíthatod.",
+            "⏸ Szünet: megállítja a futást; a ▶ vagy a ⏭ gombbal folytathatod.",
+            "⟲ Visszaállítás: elölről kezdi a programot, és törli a konzolt és a változókat.",
+            "A Beolvasás szimbólum a Konzol fülön kér értéket; a program addig vár."
+          ]
+        ]
+      },
+      {
+        "title": "Léptetés",
+        "content": [
+          "A ⏭ Lépés gomb egyszerre egy szimbólumot hajt végre. Közben a Változók fülön követheted a változók aktuális értékét, a Konzol fülön a kiírásokat. Léptetés közben bármikor átválthatsz ▶ Futtatásra."
+        ]
+      },
+      {
+        "title": "Hibakeresés (debug)",
+        "content": [
+          [
+            "Töréspont: Shift + kattintás egy szimbólumon, vagy a szerkesztőablak „Töréspont” jelölőnégyzete. A töréspontot piros pont jelzi a szimbólum sarkában.",
+            "Futtatáskor a program megáll a töréspontnál, mielőtt végrehajtaná az adott szimbólumot, és a Változók fülre vált.",
+            "A legutóbbi lépésben megváltozott változók sárga háttérrel látszanak.",
+            "Innen folytathatod lépésenként (⏭) vagy a következő töréspontig (▶).",
+            "Töréspont szimbólum (mint a Flowgorithmban): a futás megáll, amikor ideér — ha feltételt adsz meg (pl. i = 4), csak akkor, ha a feltétel igaz.",
+            "Futásidejű hibánál a hibát okozó szimbólum ki van emelve, a hibaüzenet pedig a konzolon olvasható."
+          ]
+        ]
+      },
+      {
+        "title": "Kifejezések",
+        "content": [
+          [
+            "Tömbök: t[i], az indexelés 0-tól indul. Struktúramezők: p.x, t[i].nev.",
+            "Szöveg idézőjelek között: \"alma\" vagy 'alma' (nincsenek escape-jelek, a \\ közönséges karakter).",
+            "A nevek (változók, eljárások) betűvel kezdődnek, betűt és számot tartalmazhatnak; a kis- és nagybetű nem számít.",
+            "A teljes operátor- és függvénylista lent, a táblázatokban."
+          ]
+        ]
+      },
+      {
+        "title": "Nézet",
+        "content": [
+          "A jobb alsó sarokban nagyíthatsz (+), kicsinyíthetsz (−), vagy az egész ábrát a képernyőhöz illesztheted (⛶). Az üres háttéren húzva görgetheted az ábrát. A jobb oldali panel szélességét az ábra és a panel közötti elválasztó vonal húzásával állíthatod — a böngésző megjegyzi. A felugró ablakok a címüknél (vagy bármely üres részüknél) fogva áthelyezhetők."
+        ]
+      },
+      {
+        "title": "Fájlok, példák, forráskód",
+        "content": [
+          [
+            "A Fájlok fülön kezelheted a programok által olvasott és írt adatfájlokat (lásd Fájlok).",
+            "Mentés: .flow fájlba. Megnyitás: .flow fájl, vagy a Flowgorithm programmal készült .fprg fájl (amit az alkalmazás nem ismer, pl. a teknőcgrafika, arról szól). A program a böngészőben is megmarad.",
+            "Frissítés: ha közben megjelenik az alkalmazás új verziója, az oldal magától frissül, amint épp nem fut program és nincs nyitva ablak — a megnyitott program és a nézet megmarad.",
+            "A fejléc gombjai ikongombok (Új, Megnyitás, Mentés, Kép exportálása, majd a futtatás gombjai): az egeret fölé vive kiírja, melyik melyik. A Kép exportálása PNG képet készít a folyamatábráról.",
+            "Új: az induláskor megjelenő ablak — üres projekt vagy kész példák (programozási tételek, struktúrák, fájlkezelés); a betöltött program ugyanúgy szerkeszthető és folytatható, mintha te írtad volna.",
+            "A Kód fülön Python, C++ vagy C# forráskódot generálhatsz a programból — színezve, sorszámozva; a Nagyítás gombbal nagy ablakban is megnézheted.",
+            "A Pszeudokód az alkalmazás nyelvén írja le a programot: magyarul az ELTE-n tanított mondatszerű leírással (Program:, Változó x:Egész, Ha … akkor … különben … Elágazás vége, Ciklus i=1-től N-ig, Eljárás, Függvény), angolul a Cambridge International pszeudokódjával. A tömbök és a szövegek indexelése itt is 0-tól kezdődik, mint a folyamatábrán."
+          ]
+        ]
+      },
+      {
+        "title": "Operátorok (a Flowgorithm dokumentációja szerint)",
+        "table": {
+          "head": [
+            "Művelet",
+            "C-család",
+            "BASIC-család",
+            "Matematikai (Unicode)"
+          ],
+          "rows": [
+            [
+              "Egyenlő",
+              "==",
+              "=",
+              "="
+            ],
+            [
+              "Nem egyenlő",
+              "!=",
+              "<>",
+              "≠"
+            ],
+            [
+              "Kisebb / nagyobb",
+              "<  >",
+              "<  >",
+              "<  >"
+            ],
+            [
+              "Kisebb vagy egyenlő",
+              "<=",
+              "<=",
+              "≤"
+            ],
+            [
+              "Nagyobb vagy egyenlő",
+              ">=",
+              ">=",
+              "≥"
+            ],
+            [
+              "Logikai nem",
+              "!",
+              "not",
+              "¬"
+            ],
+            [
+              "Logikai és",
+              "&&",
+              "and",
+              "∧"
+            ],
+            [
+              "Logikai vagy",
+              "||",
+              "or",
+              "∨"
+            ],
+            [
+              "Szorzás",
+              "*",
+              "*",
+              "×"
+            ],
+            [
+              "Osztás (mindig valós)",
+              "/",
+              "/",
+              "÷"
+            ],
+            [
+              "Maradék",
+              "%",
+              "mod",
+              ""
+            ],
+            [
+              "Összeadás, kivonás",
+              "+  -",
+              "+  -",
+              ""
+            ],
+            [
+              "Szöveg összefűzése",
+              "",
+              "&",
+              ""
+            ],
+            [
+              "Hatványozás",
+              "",
+              "^",
+              "↑"
+            ],
+            [
+              "Egész osztás (az app kiegészítése)",
+              "",
+              "div",
+              ""
+            ]
+          ],
+          "codeColumns": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "title": "Precedencia (erősebbtől a gyengébb felé)",
+        "table": {
+          "head": [
+            "Szint",
+            "Operátorok",
+            "Megjegyzés"
+          ],
+          "rows": [
+            [
+              "8 – egyoperandusú",
+              "-  !  not  ¬",
+              "-2 ^ 2 = 4"
+            ],
+            [
+              "7 – hatvány",
+              "^  ↑",
+              "jobbról köt: 2 ^ 3 ^ 2 = 512"
+            ],
+            [
+              "6 – szorzás",
+              "*  ×  /  ÷  %  mod  div",
+              "6 / 3 * 2 = 4 (balról jobbra)"
+            ],
+            [
+              "5 – összeadás",
+              "+  -",
+              ""
+            ],
+            [
+              "4 – összefűzés",
+              "&",
+              "\"n=\" & 1 + 2 → \"n=3\""
+            ],
+            [
+              "3 – összehasonlítás",
+              "=  ==  <>  !=  ≠  <  >  <=  ≤  >=  ≥",
+              "nem láncolható (1 < x < 5 helyett: 1 < x and x < 5)"
+            ],
+            [
+              "2 – és",
+              "and  &&  ∧",
+              ""
+            ],
+            [
+              "1 – vagy",
+              "or  ||  ∨",
+              ""
+            ]
+          ],
+          "codeColumns": [
+            1
+          ]
+        }
+      },
+      {
+        "title": "Beépített függvények",
+        "table": {
+          "head": [
+            "Függvény",
+            "Leírás",
+            "Példa"
+          ],
+          "rows": [
+            [
+              "Abs(n)",
+              "abszolút érték",
+              "Abs(-3) → 3"
+            ],
+            [
+              "Sqrt(n)",
+              "négyzetgyök",
+              "Sqrt(16) → 4"
+            ],
+            [
+              "Sin(n), Cos(n), Tan(n)",
+              "szögfüggvények (radián)",
+              "Cos(0) → 1"
+            ],
+            [
+              "Arcsin(n), Arccos(n), Arctan(n)",
+              "inverz szögfüggvények",
+              "Arctan(1) → 0.785…"
+            ],
+            [
+              "Ln(n), Log(n)",
+              "természetes logaritmus",
+              "Ln(1) → 0"
+            ],
+            [
+              "Log10(n)",
+              "10-es alapú logaritmus",
+              "Log10(1000) → 3"
+            ],
+            [
+              "Int(n)",
+              "egészrész (a törtrész elhagyásával)",
+              "Int(3.9) → 3"
+            ],
+            [
+              "Sgn(n)",
+              "előjel: -1, 0 vagy 1",
+              "Sgn(-5) → -1"
+            ],
+            [
+              "Random(n)",
+              "véletlen egész 0 és n-1 között",
+              "Random(6) + 1 → dobókocka"
+            ],
+            [
+              "Len(s)",
+              "a szöveg hossza",
+              "Len(\"alma\") → 4"
+            ],
+            [
+              "Char(s, i)",
+              "a szöveg i. karaktere, 0-tól számozva",
+              "Char(\"alma\", 0) → \"a\""
+            ],
+            [
+              "ToChar(n)",
+              "karakterkódból karakter",
+              "ToChar(65) → \"A\""
+            ],
+            [
+              "ToCode(c)",
+              "karakterből karakterkód",
+              "ToCode(\"A\") → 65"
+            ],
+            [
+              "ToFixed(r, i)",
+              "valós szám szövegként, i tizedesjeggyel",
+              "ToFixed(3.14159, 2) → \"3.14\""
+            ],
+            [
+              "ToInteger(s)",
+              "szövegből egész szám",
+              "ToInteger(\"42\") → 42"
+            ],
+            [
+              "ToReal(s)",
+              "szövegből valós szám",
+              "ToReal(\"2.5\") → 2.5"
+            ],
+            [
+              "ToString(n)",
+              "számból szöveg",
+              "ToString(12) & \"!\" → \"12!\""
+            ],
+            [
+              "Size(t)",
+              "a tömb elemszáma",
+              "Size(t)"
+            ],
+            [
+              "EOF()  /  eof(\"fájl\")",
+              "igaz, ha az olvasásra megnyitott fájl végére értünk (név nélkül: a legutóbb megnyitott fájl)",
+              "amíg not EOF()"
+            ]
+          ],
+          "codeColumns": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "title": "Az app további függvényei (nem részei a Flowgorithmnak)",
+        "table": {
+          "head": [
+            "Függvény",
+            "Leírás"
+          ],
+          "rows": [
+            [
+              "Random(a, b)",
+              "véletlen egész a és b között (a határokat is beleértve)"
+            ],
+            [
+              "Round(n), Floor(n), Ceil(n), Trunc(n)",
+              "kerekítés, lefelé, felfelé, csonkítás"
+            ],
+            [
+              "Min(a, b, …), Max(a, b, …)",
+              "legkisebb, legnagyobb"
+            ],
+            [
+              "Pow(a, b)",
+              "hatvány, mint a ^"
+            ],
+            [
+              "Left(s, n), Right(s, n), Mid(s, kezdet, hossz)",
+              "részszöveg (Mid 0-tól számoz)"
+            ],
+            [
+              "Upper(s), Lower(s), Trim(s)",
+              "nagybetűs, kisbetűs, szóközök levágása"
+            ],
+            [
+              "Length(x)",
+              "szöveg hossza vagy tömb mérete"
+            ],
+            [
+              "Sign(n), Asin(n), Acos(n), Atan(n), Ascii(c)",
+              "a Sgn, Arcsin, Arccos, Arctan, ToCode másik neve"
+            ]
+          ],
+          "codeColumns": [
+            0
+          ]
+        }
+      },
+      {
+        "title": "Konstansok és foglalt szavak",
+        "table": {
+          "head": [
+            "Csoport",
+            "Szavak"
+          ],
+          "rows": [
+            [
+              "Konstansok",
+              "True, False, pi (π)"
+            ],
+            [
+              "Foglalt szavak",
+              "and, or, not, mod, div, true, false, pi"
+            ],
+            [
+              "Típusnevek",
+              "Integer, Real, String, Boolean"
+            ],
+            [
+              "Nem lehet eljárás vagy struktúra neve",
+              "a fenti szavak és a beépített függvények nevei (pl. Len, Max, ToString)"
+            ]
+          ],
+          "codeColumns": [
+            1
+          ]
+        }
+      }
+    ],
+    "examReplacements": {
+      "Fájlok, példák, forráskód": "Fájlok, forráskód",
+      "Új:": "Új: üres programot kezd (dolgozat üzemmódban nincsenek beépített példák).",
+      "Frissítés:": "Dolgozat üzemmód: ez a telepített, internet nélkül működő változat dolgozatokhoz és vizsgákhoz. Nincsenek benne beépített példák, és nem keres frissítést.",
+      "Mentés:": "Mentés: .flow fájlba. Megnyitás: .flow fájl, vagy a Flowgorithm programmal készült .fprg fájl (amit az alkalmazás nem ismer, pl. a teknőcgrafika, arról szól). A megnyitott program bezáráskor is megmarad, a következő indításkor visszajön."
+    },
+    "download": {
+      "title": "Vizsgaváltozat letöltése ({version} verzió)",
+      "lead": "Telepíthető asztali változat dolgozatokhoz, vizsgákhoz és az érettségihez. Ugyanaz a Folyamatábrázoló, mint itt a böngészőben, de:",
+      "points": [
+        {
+          "title": "Példák nélkül",
+          "text": "nincsenek benne beépített minták és kész programok, az Új mindig üres programot kezd"
+        },
+        {
+          "title": "Teljesen offline",
+          "text": "internetkapcsolat nélkül fut, semmit nem tölt le, és nem is keres frissítést"
+        },
+        {
+          "title": "Vizsgára készült",
+          "text": "saját ablakban fut, böngésző nélkül; a súgó benne van"
+        }
+      ],
+      "action": "Letöltés",
+      "appImage": {
+        "label": "Linux · AppImage",
+        "note": "telepítés nélkül, bármely disztribúción: futtathatóvá kell tenni (chmod +x), majd elindítani"
+      },
+      "deb": {
+        "label": "Linux · .deb csomag",
+        "note": "Debian, Ubuntu, Linux Mint: sudo apt install ./{file}"
+      },
+      "exe": {
+        "label": "Windows · .exe telepítő",
+        "note": "Windows 10 és 11 (64 bites); ha a SmartScreen figyelmeztet: További információ, majd Futtatás mindenképp"
+      },
+      "msi": {
+        "label": "Windows · .msi csomag",
+        "note": "iskolai gépekre, rendszergazdáknak: csendes vagy központi telepítés, pl. msiexec /i {file} /qn"
+      }
+    }
+  }
+}

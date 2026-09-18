@@ -1,0 +1,15 @@
+# Checks every language file on each push and pull request: the same check
+# the app's build runs before it takes a language in (tools/languages.mjs).
+name: Validate language files
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node tools/languages.mjs languages
