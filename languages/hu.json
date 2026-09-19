@@ -8,7 +8,8 @@
     ]
   },
   "messages": {
-    "appTitle": "Folyáb",
+    "appTitle": "Folyáb - Folyamatábra",
+    "appName": "Folyáb",
     "menuNew": "Új",
     "menuOpen": "Megnyitás…",
     "menuSave": "Mentés",
@@ -61,7 +62,7 @@
     "close": "Bezárás",
     "confirmNewProgram": "Új program létrehozása? A nem mentett módosítások elvesznek.",
     "confirmDeleteRoutine": "Törlöd ezt az eljárást?",
-    "confirmDeleteBlock": "Törlöd ezt az elemet?",
+    "confirmDeleteBlock": "Törlöd ezt a szimbólumot?",
     "insertBlock": "Szimbólum beszúrása",
     "editBlock": "Szimbólum szerkesztése",
     "blockDeclare": "Deklarálás",
@@ -69,14 +70,14 @@
     "blockInput": "Beolvasás",
     "blockOutput": "Kiírás",
     "blockIf": "Elágazás",
-    "blockWhile": "Ciklus (elöltesztelt)",
-    "blockDowhile": "Ciklus (hátultesztelt)",
-    "blockFor": "Számláló ciklus",
+    "blockWhile": "Ciklus (elöltesztelő)",
+    "blockDowhile": "Ciklus (hátultesztelő)",
+    "blockFor": "Számlálós ciklus",
     "blockCall": "Hívás",
     "blockComment": "Megjegyzés",
     "labelExpression": "Kifejezés",
     "labelCondition": "Feltétel",
-    "labelPrompt": "Felirat (opcionális)",
+    "labelPrompt": "Felirat (nem kötelező)",
     "labelNewline": "Új sor a kiírás után",
     "labelStart": "Kezdő érték",
     "labelEnd": "Záró érték",
@@ -88,9 +89,22 @@
     "labelArraySize": "Tömb mérete",
     "labelVariable": "Változó",
     "labelVariableNames": "Változónevek (vesszővel elválasztva)",
+    "labelAllFields": "Minden mező egyszerre (mind)",
+    "allFieldsEmpty": "Adj értéket legalább egy mezőnek.",
+    "structAssignGroup": "{name} mezőinek értékadása",
     "byRef": "cím szerint",
-    "byRefArgHint": "Ez a paraméter cím szerinti — ide egy egyszerű változónevet írj.",
+    "byRefArgHint": "Ez a paraméter cím szerinti – ide egy egyszerű változónevet írj.",
     "langLabel": "Nyelv",
+    "settingsTitle": "Beállítások",
+    "uiZoomLabel": "Méret",
+    "uiZoomIn": "Nagyítás",
+    "uiZoomOut": "Kicsinyítés",
+    "uiZoomReset": "Eredeti méret (100%)",
+    "settingsVersion": "Verzió",
+    "editionWeb": "webes változat",
+    "editionExam": "vizsgaváltozat",
+    "editionOffline": "offline változat példákkal",
+    "downloadPageLink": "A letöltési oldal megnyitása",
     "resizePanel": "Húzd el a panel átméretezéséhez",
     "start": "Kezdés",
     "end": "Vége",
@@ -100,42 +114,42 @@
     "errAlreadyDeclared": "A(z) \"{name}\" változó már deklarálva van.",
     "errUnknownRoutine": "Ismeretlen eljárás: \"{name}\".",
     "errNotArray": "A(z) \"{name}\" nem tömb.",
-    "errArrayNeedsIndex": "A(z) \"{name}\" egy tömb — indexet kell használni, pl. {name}[0].",
+    "errArrayNeedsIndex": "A(z) \"{name}\" tömb – indexet kell használni, pl. {name}[0].",
     "errIndexOutOfRange": "Az index kívül esik a(z) \"{name}\" tömb határain.",
     "errByRefNeedsVariable": "A(z) \"{name}\" paraméter cím szerinti, ezért az argumentumnak egy egyszerű változónévnek kell lennie.",
     "errInvalidAssignTarget": "A(z) \"{name}\" nem érvényes értékadási cél.",
     "errTooManySteps": "A végrehajtás leállt: túl sok lépés (talán végtelen ciklus).",
-    "errDivisionByZero": "Nullával való osztás ({operator}).",
+    "errDivisionByZero": "Osztás nullával ({operator}).",
     "errInvalidBoolean": "A(z) \"{value}\" nem logikai érték (írj true-t vagy false-t).",
     "errWrongArgCount": "A(z) \"{name}\" {expected} argumentumot vár, de {actual} érkezett.",
     "errParamTypeMismatch": "A(z) \"{param}\" cím szerinti paraméter típusa {expected}, de az átadott változóé {actual}.",
-    "errNotAFunction": "A(z) \"{name}\" eljárás: nincs értéke, Hívás szimbólummal hívd meg.",
+    "errNotAFunction": "A(z) \"{name}\" eljárás: nincs visszatérési értéke, a Hívás szimbólummal hívd meg.",
     "errStackOverflow": "Túl sok egymásba ágyazott hívás (végtelen rekurzió?).",
-    "errForStepZero": "A számláló ciklus lépésköze nem lehet 0.",
-    "errInvalidArraySize": "Érvénytelen tömbméret: {value} (0 és 1000000 között).",
+    "errForStepZero": "A számlálós ciklus lépésköze nem lehet 0.",
+    "errInvalidArraySize": "Érvénytelen tömbméret: {value} (0 és 1 000 000 között).",
     "errInvalidNumber": "A(z) \"{value}\" nem szám.",
     "errFileNotOpen": "A(z) \"{name}\" fájl nincs megnyitva (előbb használj Fájl megnyitása szimbólumot).",
     "errFileAlreadyOpen": "A(z) \"{name}\" fájl már meg van nyitva.",
-    "errFileNotFound": "Nincs \"{name}\" nevű fájl — töltsd fel vagy hozd létre a Fájlok fülön.",
+    "errFileNotFound": "Nincs \"{name}\" nevű fájl – töltsd fel vagy hozd létre a Fájlok fülön.",
     "errFileNotReadable": "A(z) \"{name}\" fájl írásra van megnyitva, nem olvasásra.",
     "errFileNotWritable": "A(z) \"{name}\" fájl olvasásra van megnyitva, nem írásra.",
-    "errFileEnd": "A(z) \"{name}\" fájlban nincs több olvasható sor (fájl vége) — előbb vizsgáld: eof(\"{name}\").",
-    "errNotStruct": "A \".{name}\" csak struktúra értéke után állhat.",
+    "errFileEnd": "A(z) \"{name}\" fájlban nincs több olvasható sor (fájl vége) – előbb vizsgáld: eof(\"{name}\").",
+    "errNotStruct": "A \".{name}\" csak struktúra típusú érték után állhat.",
     "errUnknownField": "Ismeretlen struktúramező: {name}.",
     "errTypeMismatch": "Típuseltérés: {name}.",
     "errUnknownType": "Ismeretlen típus: \"{name}\".",
     "errRecursiveStruct": "A(z) \"{name}\" struktúra önmagát tartalmazza.",
     "errInputNeedsSimpleTarget": "A beolvasás csak egyszerű változóba, tömbelembe vagy mezőbe történhet, ide nem: \"{name}\".",
-    "errParse": "Kifejezés hiba: {message}",
+    "errParse": "Kifejezéshiba: {message}",
     "errRuntime": "Futásidejű hiba",
     "errGeneric": "Hiba",
     "programFinished": "A program lefutott.",
     "programStopped": "A program leállítva.",
     "waitingForInput": "Várakozás bevitelre…",
-    "nothingToRun": "Nincs mit futtatni — előbb készíts egy folyamatábrát.",
-    "fileLoadError": "A fájl nem olvasható — lehet, hogy nem érvényes .flow vagy Flowgorithm .fprg fájl.",
+    "nothingToRun": "Nincs mit futtatni – előbb készíts egy folyamatábrát.",
+    "fileLoadError": "A fájl nem olvasható – lehet, hogy nem érvényes .flow vagy Flowgorithm .fprg fájl.",
     "duplicateRoutineName": "Ez a név már foglalt (eljárás, struktúra vagy típus).",
-    "invalidName": "Adj meg egy érvényes nevet (betűk, számok, aláhúzás, betűvel kezdve).",
+    "invalidName": "Adj meg egy érvényes nevet (betűk, számjegyek, aláhúzásjel; betűvel kezdődjön).",
     "fitToScreen": "Illesztés",
     "addStruct": "+ Struktúra",
     "editStruct": "Struktúra szerkesztése",
@@ -143,13 +157,13 @@
     "addField": "+ Mező",
     "confirmDeleteStruct": "Törlöd ezt a struktúrát?",
     "structInUse": "A(z) \"{name}\" struktúrát még használja egy változó, paraméter, visszatérési típus vagy másik struktúra, ezért nem törölhető.",
-    "invalidFieldName": "Minden mezőnek érvényes nevet adj (betűk, számok, aláhúzás, betűvel kezdve).",
+    "invalidFieldName": "Minden mezőnek érvényes nevet adj (betűk, számjegyek, aláhúzásjel; betűvel kezdődjön).",
     "duplicateFieldName": "Két mezőnek ugyanaz a neve.",
     "invalidVariableName": "A(z) \"{name}\" nem lehet név: betűvel kezdődjön, utána betű, szám vagy _ jöhet, és ne legyen foglalt szó vagy beépített függvény neve.",
     "duplicateParamName": "Két paraméternek ugyanaz a neve.",
-    "paramNamedLikeRoutine": "Paraméter nem kaphatja az eljárás saját nevét.",
-    "routineInUse": "A(z) \"{name}\" eljárást még meghívja valami, ezért nem törölhető.",
-    "structTabTitle": "Struktúra — kattints a szerkesztéshez",
+    "paramNamedLikeRoutine": "A paraméter neve nem egyezhet meg az eljárás nevével.",
+    "routineInUse": "A(z) \"{name}\" eljárást még hívja a program, ezért nem törölhető.",
+    "structTabTitle": "Struktúra – kattints a szerkesztéshez",
     "blockBreakpoint": "Töréspont",
     "labelBreakpointCondition": "Csak akkor álljon meg, ha (nem kötelező feltétel, pl. i = 4)",
     "labelFileNameOptional": "Fájl neve (üresen: a legutóbb megnyitott fájl)",
@@ -159,6 +173,22 @@
     "blockFileread": "Olvasás fájlból",
     "blockFilewrite": "Írás fájlba",
     "blockFileclose": "Fájl bezárása",
+    "blockRegion": "Szakasz megjegyzéssel",
+    "regionNew": "Megjegyzés a kijelöltekhez…",
+    "regionNewHint": "A szimbólumok (a kijelöltek és a köztük lévők) elé egy jegyzetlap kerül a megjegyzéssel, alá egy pötty, a szakasz végére a párja. Bármelyik pöttyre kattintva összecsukhatod a szakaszt.",
+    "regionRemove": "Megjegyzés törlése",
+    "confirmRemoveRegion": "Törlöd a megjegyzést? A szimbólumok megmaradnak.",
+    "confirmDeleteRegion": "Törlöd a szakaszt a benne lévő szimbólumokkal együtt?",
+    "regionCollapsedLabel": "Összecsukva",
+    "regionCollapsedHint": "{count} szimbólum – kattints a kinyitáshoz",
+    "regionExpand": "Szakasz kinyitása",
+    "regionCollapse": "Szakasz összecsukása",
+    "regionEditHint": "Kattints a megjegyzés szerkesztéséhez",
+    "selectionClear": "Kijelölés megszüntetése",
+    "menuCut": "Kivágás",
+    "regionNewOne": "Megjegyzés hozzáfűzése…",
+    "breakpointSet": "Töréspont beállítása",
+    "breakpointRemove": "Töréspont törlése",
     "fileOpenShort": "Megnyit",
     "fileReadShort": "Olvas",
     "fileWriteShort": "Ír",
@@ -172,7 +202,7 @@
     "fileModeShort_write": "ír",
     "fileModeShort_append": "hozzáfűz",
     "filesIntro": "Szövegfájlok, amelyeket a programok a nevükkel (pl. \"file-a\") olvashatnak és írhatnak. A böngészőben tárolódnak; a program által létrehozott fájlok is itt jelennek meg.",
-    "filesEmpty": "Még nincs fájl — tölts fel egyet, vagy hozz létre új fájlt.",
+    "filesEmpty": "Még nincs fájl – tölts fel egyet, vagy hozz létre új fájlt.",
     "filesUpload": "Feltöltés…",
     "filesNew": "+ Új fájl",
     "filesDownload": "Letöltés",
@@ -189,17 +219,25 @@
     "fileNameTaken": "Már van ilyen nevű fájl.",
     "filesStorageFull": "Megtelt a böngésző tárhelye: a fájlok csak az oldal bezárásáig maradnak meg. Töltsd le, amire szükséged van.",
     "emptyProject": "Üres projekt",
-    "examModeBadge": "dolgozat üzemmód",
+    "examModeBadge": "dolgozatüzemmód",
+    "offlineEditionBadge": "példákkal",
     "backToApp": "Vissza az alkalmazáshoz",
     "enlargeCode": "Nagyítás",
-    "versionLabel": "verzió: {version} ({date})",
+    "versionLabel": "verzió: {version}",
     "versionDevelopment": "fejlesztői változat",
     "copyrightNotice": "© 2026 Répássy László. Minden jog fenntartva.",
     "translatedBy": "Fordítás: {names}",
     "appUpdated": "Az alkalmazás frissült a legújabb verzióra; a programod megmaradt.",
     "menuHelp": "Súgó",
     "helpTitle": "Súgó",
-    "helpPageTitle": "Folyáb súgó",
+    "helpPageTitle": "Folyáb - Folyamatábra súgó",
+    "helpContents": "Tartalom",
+    "downloadLink": "Letöltés",
+    "websiteLink": "Weboldal",
+    "downloadPageLead": "Folyamatábra alapú programozás a böngészőben, vagy vizsga üzemmódban, telepített szoftverrel.",
+    "onlineAppAction": "Indítás",
+    "onlineAppLabel": "Online program",
+    "onlineAppNote": "közvetlenül a böngészőben, telepítés nélkül, beépített példákkal és súgóval",
     "labelBreakpoint": "Töréspont (a futás itt megáll)",
     "pausedAtBreakpoint": "Megállt egy töréspontnál.",
     "examplesTitle": "Új program",
@@ -209,10 +247,11 @@
   "help": {
     "sections": [
       {
-        "title": "Elemek hozzáadása",
+        "chapter": "A folyamatábra szerkesztése",
+        "title": "Szimbólumok hozzáadása",
         "content": [
-          "Kattints a folyamatábra bármelyik nyilára (összekötő vonalára): feljön a szimbólumválasztó, és a kiválasztott elem arra a helyre kerül.",
-          "Az új elem rögtön megnyílik szerkesztésre. Minden felugró ablakban az Enter az alapértelmezett (kék) gombot nyomja meg, pl. Mentés vagy OK; az Esc bezárja az ablakot."
+          "Kattints a folyamatábra bármelyik nyilára (összekötő vonalára): megjelenik a szimbólumválasztó, és a kiválasztott szimbólum arra a helyre kerül.",
+          "Az új szimbólum rögtön megnyílik szerkesztésre. Minden felugró ablakban az Enter az alapértelmezett (kék) gombot nyomja meg, pl. Mentés vagy OK; az Esc bezárja az ablakot."
         ]
       },
       {
@@ -222,27 +261,49 @@
         ]
       },
       {
-        "title": "Jobb egérgomb: kivágás és beillesztés",
+        "title": "Jobb egérgomb: menü, kivágás és beillesztés",
         "content": [
           [
-            "Jobb klikk egy szimbólumon: kivágja (egy elágazás vagy ciklus a teljes tartalmával együtt kerül át). A fejlécben megjelenik a kivágott elem jelzése.",
-            "Jobb klikk egy nyílon: oda illeszti be a kivágott elemet. Ha nincs kivágott elem, a szimbólumválasztó jelenik meg.",
-            "A fejlécben lévő jelzésre kattintva elveted a kivágott elemet (ilyenkor az elem elvész)."
+            "Jobb kattintás egy szimbólumon: megnyílik a helyi menüje (szerkesztés, kivágás, megjegyzés hozzáfűzése (kijelölt szimbólumon a kijelöltekhez), töréspont beállítása vagy törlése, törlés).",
+            "A Kivágás kiveszi a szimbólumot (egy elágazás vagy ciklus a teljes tartalmával együtt kerül át). A fejlécben megjelenik a kivágott szimbólum jelzése.",
+            "Jobb kattintás egy nyílon: oda illeszti be a kivágott szimbólumot. Ha nincs kivágott szimbólum, a szimbólumválasztó jelenik meg.",
+            "A fejlécben lévő jelzésre kattintva elveted a kivágott szimbólumot (ilyenkor elvész)."
           ]
         ]
       },
       {
+        "title": "Megjegyzés több szimbólumhoz, összecsukás",
+        "content": [
+          [
+            "Ctrl + kattintással jelölheted ki a szimbólumokat (szaggatott kék keret); újabb Ctrl + kattintással kiveheted őket a kijelölésből. Az Esc vagy egy kattintás az üres területre megszünteti a kijelölést.",
+            "Jobb kattintás egy kijelölt szimbólumon, majd „Megjegyzés a kijelöltekhez…” (vagy bármelyik szimbólumon „Megjegyzés hozzáfűzése…”): a megjegyzésed egy jegyzetlapon a szakasz elejére kerül, alatta egy pötty, a szakasz végén, a kimenő nyílon pedig a párja.",
+            "Bármelyik pöttyre kattintva a két pötty egyesül, és elrejti a köztük lévő szimbólumokat (mint a C# #region-je), pl. a deklarációkat; az egyesült pöttyre kattintva újra kinyílik. A jegyzetlapra kattintva szerkesztheted a megjegyzést; jobb kattintással összecsukhatod, kinyithatod, törölheted a megjegyzést (a szimbólumok megmaradnak) vagy a teljes szakaszt.",
+            "A szakasz úgy fut, mintha a szimbólumai állnának a helyén. A generált kódban megjegyzés lesz belőle (C#-ban #region).",
+            "Kipróbálható példa: az Új ablak Alapok csoportjában a „Megjegyzések, összecsukható szakaszok” program."
+          ]
+        ]
+      },
+      {
+        "title": "Nézet",
+        "content": [
+          "A jobb alsó sarokban nagyíthatsz (+), kicsinyíthetsz (−), vagy az egész ábrát a képernyőhöz illesztheted (⛶). Az üres háttéren húzva görgetheted az ábrát. A jobb oldali panel szélességét az ábra és a panel közötti elválasztó vonal húzásával állíthatod – a böngésző megjegyzi. A felugró ablakok a címsoruknál (vagy bármely üres részüknél) fogva áthelyezhetők.",
+          "Beállítások: a jobb felső csavarkulcs ikonra kattintva választhatsz nyelvet, és ott állíthatod az egész alkalmazás méretét százalékban (a − és + gomb azonnal kicsinyít, illetve nagyít; a böngésző megjegyzi). Ugyanitt látod a verziót, azt, hogy melyik változatot használod (webes, vizsga- vagy példákat tartalmazó offline változat), és itt nyithatod meg a letöltési oldalt."
+        ]
+      },
+      {
+        "chapter": "Eljárások, struktúrák, fájlok",
         "title": "Eljárások és függvények",
         "content": [
           "A „+ Eljárás” füllel hozhatsz létre eljárást vagy függvényt paraméterekkel; a ✎ ikonnal szerkesztheted. Hívni a Hívás szimbólummal vagy kifejezésből lehet, pl. Dupla(n).",
-          "A függvény visszatérési értéke a függvénnyel azonos nevű változó értéke a függvény végén. A „cím szerint” jelölt paraméter a hívó változóját módosítja; a tömbök mindig cím szerint adódnak át."
+          "A függvény visszatérési értéke a függvénnyel azonos nevű változó értéke a függvény végén. A „cím szerint” jelölésű paraméter a hívó változóját módosítja; a tömbök mindig cím szerint adódnak át."
         ]
       },
       {
         "title": "Struktúrák (rekordok)",
         "content": [
           "A „+ Struktúra” gombbal saját típust hozhatsz létre névvel és mezőkkel (pl. Pont: x, y). Egy mező típusa alaptípus vagy egy másik struktúra is lehet. A struktúra fülére kattintva szerkesztheted, átnevezheted vagy törölheted.",
-          "A struktúra típusként bárhol választható: deklarációnál (tömbként is), paraméternél, függvény visszatérési típusánál. A mezőkre ponttal hivatkozol: p.x, t[i].nev, a.sarok.x — kifejezésben, értékadásban és beolvasásban is.",
+          "A struktúra típusként bárhol választható: deklarációnál (tömbként is), paraméternél, függvény visszatérési típusánál. A mezőkre ponttal hivatkozol: p.x, t[i].nev, a.sarok.x – kifejezésben, értékadásban és beolvasásban is.",
+          "Egy struktúra minden mezője egy lépésben is értéket kaphat: az Értékadás szimbólumban add meg a struktúra változóját (pl. en), pipáld be a „Minden mező egyszerre (mind)” négyzetet, és töltsd ki a mezőket. Mentéskor mezőnként külön értékadás jön létre, együtt egy összecsukott, megjegyzéssel ellátott szakaszban („en mezőinek értékadása”).",
           "Az értékadás (b = a) és az érték szerinti paraméter másolatot készít; a cím szerinti paraméter az eredetit módosítja."
         ]
       },
@@ -252,16 +313,17 @@
           [
             "A Fájlok fülön tölthetsz fel fájlokat, hozhatsz létre újat, megnézheted és szerkesztheted a tartalmukat, átnevezheted, letöltheted és törölheted őket. A fájlok a böngészőben tárolódnak.",
             "A programból a fájlokra a nevükkel hivatkozol, szövegként: \"file-a\". Szimbólumok: Fájl megnyitása (olvasásra, írásra vagy hozzáfűzésre), Olvasás fájlból (egy sort olvas egy változóba), Írás fájlba, Fájl bezárása.",
-            "Az eof(\"file-a\") függvény igaz, ha az olvasásra megnyitott fájlban nincs több sor — pl. ciklus: amíg not eof(\"file-a\"). Olvasásnál, írásnál, bezárásnál és az EOF()-nál a fájlnév el is hagyható: ilyenkor a legutóbb megnyitott fájlra vonatkozik (a Flowgorithm így kezeli a fájlokat).",
+            "Az eof(\"file-a\") függvény értéke igaz, ha az olvasásra megnyitott fájlban nincs több sor – pl. ciklus: amíg not eof(\"file-a\"). Olvasásnál, írásnál, bezárásnál és az EOF()-nál a fájlnév el is hagyható: ilyenkor a művelet a legutóbb megnyitott fájlra vonatkozik (a Flowgorithm így kezeli a fájlokat).",
             "Az írásra megnyitott fájl létrejön (vagy felülíródik); amit a program létrehoz, az azonnal megjelenik a Fájlok fülön, és onnan letöltheted."
           ]
         ]
       },
       {
+        "chapter": "Futtatás és hibakeresés",
         "title": "Futtatás",
         "content": [
           [
-            "▶ Futtatás: végrehajtja a programot; az éppen végrehajtott szimbólum kék kiemelést kap. A tempót a Sebesség választóval állíthatod.",
+            "▶ Futtatás: végrehajtja a programot; először a Kezdés, a végén, amikor a program befejeződik, a Vége szimbólum világít; az éppen végrehajtott szimbólum kék kiemelést kap. A tempót a Sebesség választóval állíthatod.",
             "⏸ Szünet: megállítja a futást; a ▶ vagy a ⏭ gombbal folytathatod.",
             "⟲ Visszaállítás: elölről kezdi a programot, és törli a konzolt és a változókat.",
             "A Beolvasás szimbólum a Konzol fülön kér értéket; a program addig vár."
@@ -282,39 +344,35 @@
             "Futtatáskor a program megáll a töréspontnál, mielőtt végrehajtaná az adott szimbólumot, és a Változók fülre vált.",
             "A legutóbbi lépésben megváltozott változók sárga háttérrel látszanak.",
             "Innen folytathatod lépésenként (⏭) vagy a következő töréspontig (▶).",
-            "Töréspont szimbólum (mint a Flowgorithmban): a futás megáll, amikor ideér — ha feltételt adsz meg (pl. i = 4), csak akkor, ha a feltétel igaz.",
+            "Töréspont szimbólum (mint a Flowgorithmban): a futás megáll, amikor ideér – ha feltételt adsz meg (pl. i = 4), csak akkor, ha a feltétel igaz.",
             "Futásidejű hibánál a hibát okozó szimbólum ki van emelve, a hibaüzenet pedig a konzolon olvasható."
           ]
         ]
       },
       {
+        "chapter": "Mentés, példák, forráskód",
+        "title": "Fájlok, példák, forráskód",
+        "content": [
+          [
+            "A Fájlok fülön kezelheted a programok által olvasott és írt adatfájlokat (lásd Fájlok).",
+            "Mentés: .flow fájlba. Megnyitás: .flow fájl vagy a Flowgorithm programmal készült .fprg fájl (ha olyasmit tartalmaz, amit az alkalmazás nem ismer, pl. teknőcgrafikát, arról üzenetet kapsz). A program a böngészőben is megmarad.",
+            "Frissítés: ha közben megjelenik az alkalmazás új verziója, az oldal magától frissül, amint épp nem fut program és nincs nyitva ablak – a megnyitott program és a nézet megmarad.",
+            "A fejléc gombjai ikongombok (Új, Megnyitás, Mentés, Kép exportálása, majd a futtatás gombjai): ha az egeret föléjük viszed, kiírják, melyik melyik. A Kép exportálása PNG-képet készít a folyamatábráról.",
+            "Új: az induláskor megjelenő ablak – üres projekt vagy kész példák (a Digitális kultúra 9. és 10. tankönyv, valamint az emelt szintű okosgyűjtemény példái, programozási tételek, struktúrák, fájlkezelés); a betöltött program ugyanúgy szerkeszthető és folytatható, mintha te írtad volna.",
+            "A Kód fülön Python, C++ vagy C# forráskódot generálhatsz a programból – színezve, sorszámozva; a Nagyítás gombbal nagy ablakban is megnézheted.",
+            "A Pszeudokód az alkalmazás nyelvén írja le a programot: magyarul az ELTE-n tanított mondatszerű leírással (Program:, Változó x:Egész, Ha … akkor … különben … Elágazás vége, Ciklus i=1-től N-ig, Eljárás, Függvény), angolul a Cambridge International pszeudokódjával. A tömbök és a szövegek indexelése itt is 0-tól kezdődik, mint a folyamatábrán."
+          ]
+        ]
+      },
+      {
+        "chapter": "Kifejezések, operátorok, függvények",
         "title": "Kifejezések",
         "content": [
           [
             "Tömbök: t[i], az indexelés 0-tól indul. Struktúramezők: p.x, t[i].nev.",
             "Szöveg idézőjelek között: \"alma\" vagy 'alma' (nincsenek escape-jelek, a \\ közönséges karakter).",
-            "A nevek (változók, eljárások) betűvel kezdődnek, betűt és számot tartalmazhatnak; a kis- és nagybetű nem számít.",
-            "A teljes operátor- és függvénylista lent, a táblázatokban."
-          ]
-        ]
-      },
-      {
-        "title": "Nézet",
-        "content": [
-          "A jobb alsó sarokban nagyíthatsz (+), kicsinyíthetsz (−), vagy az egész ábrát a képernyőhöz illesztheted (⛶). Az üres háttéren húzva görgetheted az ábrát. A jobb oldali panel szélességét az ábra és a panel közötti elválasztó vonal húzásával állíthatod — a böngésző megjegyzi. A felugró ablakok a címüknél (vagy bármely üres részüknél) fogva áthelyezhetők."
-        ]
-      },
-      {
-        "title": "Fájlok, példák, forráskód",
-        "content": [
-          [
-            "A Fájlok fülön kezelheted a programok által olvasott és írt adatfájlokat (lásd Fájlok).",
-            "Mentés: .flow fájlba. Megnyitás: .flow fájl, vagy a Flowgorithm programmal készült .fprg fájl (amit az alkalmazás nem ismer, pl. a teknőcgrafika, arról szól). A program a böngészőben is megmarad.",
-            "Frissítés: ha közben megjelenik az alkalmazás új verziója, az oldal magától frissül, amint épp nem fut program és nincs nyitva ablak — a megnyitott program és a nézet megmarad.",
-            "A fejléc gombjai ikongombok (Új, Megnyitás, Mentés, Kép exportálása, majd a futtatás gombjai): az egeret fölé vive kiírja, melyik melyik. A Kép exportálása PNG képet készít a folyamatábráról.",
-            "Új: az induláskor megjelenő ablak — üres projekt vagy kész példák (programozási tételek, struktúrák, fájlkezelés); a betöltött program ugyanúgy szerkeszthető és folytatható, mintha te írtad volna.",
-            "A Kód fülön Python, C++ vagy C# forráskódot generálhatsz a programból — színezve, sorszámozva; a Nagyítás gombbal nagy ablakban is megnézheted.",
-            "A Pszeudokód az alkalmazás nyelvén írja le a programot: magyarul az ELTE-n tanított mondatszerű leírással (Program:, Változó x:Egész, Ha … akkor … különben … Elágazás vége, Ciklus i=1-től N-ig, Eljárás, Függvény), angolul a Cambridge International pszeudokódjával. A tömbök és a szövegek indexelése itt is 0-tól kezdődik, mint a folyamatábrán."
+            "A nevek (változók, eljárások) betűvel kezdődnek, betűt, számjegyet és aláhúzásjelet tartalmazhatnak; a kis- és nagybetűk között nincs különbség.",
+            "A teljes operátor- és függvénylista alább, a táblázatokban található."
           ]
         ]
       },
@@ -413,7 +471,7 @@
               "↑"
             ],
             [
-              "Egész osztás (az app kiegészítése)",
+              "Egész osztás (az alkalmazás kiegészítése)",
               "",
               "div",
               ""
@@ -427,7 +485,7 @@
         }
       },
       {
-        "title": "Precedencia (erősebbtől a gyengébb felé)",
+        "title": "Precedencia (a legerősebbtől a leggyengébbig)",
         "table": {
           "head": [
             "Szint",
@@ -502,7 +560,7 @@
             ],
             [
               "Sin(n), Cos(n), Tan(n)",
-              "szögfüggvények (radián)",
+              "szögfüggvények (radiánban)",
               "Cos(0) → 1"
             ],
             [
@@ -582,7 +640,7 @@
             ],
             [
               "EOF()  /  eof(\"fájl\")",
-              "igaz, ha az olvasásra megnyitott fájl végére értünk (név nélkül: a legutóbb megnyitott fájl)",
+              "igaz, ha az olvasás elérte a fájl végét (név nélkül: a legutóbb megnyitott fájl)",
               "amíg not EOF()"
             ]
           ],
@@ -593,7 +651,7 @@
         }
       },
       {
-        "title": "Az app további függvényei (nem részei a Flowgorithmnak)",
+        "title": "Az alkalmazás további függvényei (nem részei a Flowgorithmnak)",
         "table": {
           "head": [
             "Függvény",
@@ -606,7 +664,7 @@
             ],
             [
               "Round(n), Floor(n), Ceil(n), Trunc(n)",
-              "kerekítés, lefelé, felfelé, csonkítás"
+              "kerekítés, lefelé kerekítés, felfelé kerekítés, csonkítás"
             ],
             [
               "Min(a, b, …), Max(a, b, …)",
@@ -622,7 +680,7 @@
             ],
             [
               "Upper(s), Lower(s), Trim(s)",
-              "nagybetűs, kisbetűs, szóközök levágása"
+              "nagybetűssé, kisbetűssé alakítás, szélső szóközök levágása"
             ],
             [
               "Length(x)",
@@ -667,13 +725,45 @@
             1
           ]
         }
+      },
+      {
+        "chapter": "Nyelvek",
+        "title": "Új nyelv hozzáadása",
+        "content": [
+          "Az alkalmazás minden nyelve egyetlen JSON-fájl a nyilvános https://github.com/laszlorepassy/flowchart-languages repó languages/ mappájában, a nyelv kódjáról elnevezve: de.json (német), fr.json (francia), pt-BR.json (brazíliai portugál)… A minta a languages/en.json (az angol), a magyar a languages/hu.json. Bárki hozzáadhat új nyelvet, vagy javíthat egy meglévőn.",
+          [
+            "1. Jelentkezz be a GitHubra, nyisd meg a repót, és forkold (Fork gomb).",
+            "2. A saját forkodban másold le a languages/en.json fájlt languages/<kód>.json néven, pl. languages/de.json. A kód a nyelv kétbetűs ISO 639-1 kódja, utána állhat régió is (pt-BR).",
+            "3. Töltsd ki a \"language\" blokkot: \"code\" (a fájl neve .json nélkül), \"name\" (a nyelv neve angolul), \"nativeName\" (a nyelv saját neve, ez látszik a nyelvválasztóban) és \"translators\" (a neved; megjelenik a súgó alján).",
+            "4. Fordítsd le a szövegeket: mindig csak az értéket (a kettőspont utáni részt), soha a kulcsot (a kettőspont előtti részt). Szerkesztheted a GitHubon is (ceruzaikon), vagy bármilyen UTF-8 kódolásban mentő szövegszerkesztőben.",
+            "5. Küldj pull requestet a repóba. A Validate language files ellenőrzés magától lefut, és pontosan megmondja, mit kell még javítani.",
+            "6. Az elfogadott nyelv a következő verzióban megjelenik a webes alkalmazásban és az asztali (vizsga)változatban is, a nyelvválasztóban és a súgó nyelvi gombjai között."
+          ],
+          "Nem kell mindent egyszerre lefordítani: a kihagyott üzenet angolul jelenik meg, és ha a \"help\" blokk hiányzik, a súgó angol lesz.",
+          [
+            "A \"messages\" a felület: gombok, menük, hibaüzenetek. A rövid szöveg maradjon rövid, mert a gomboknak és a füleknek kevés a helyük.",
+            "A kapcsos zárójeles helyőrzőket, pl. {name}, {expected}, {file}, az alkalmazás tölti ki: mindegyik pontosan így maradjon meg, de oda kerülhet a mondatban, ahová a nyelv kívánja.",
+            "A kódot ne fordítsd le: a folyamatábra nyelvének kulcsszavai és függvényei (and, or, not, mod, Len, ToString, eof…), a típusnevek (Integer, Real, String, Boolean), a velük írt példák, a fájlnevek és a parancsok maradjanak változatlanok.",
+            "\"help\" → \"sections\": ez a súgó. Minden szakasznak van \"title\"-je, és vagy \"content\"-je (egyetlen szöveg: bekezdés; szövegekből álló lista: felsorolás), vagy \"table\"-je (a fejléc és a szöveges cellák fordítandók, a \"codeColumns\"-ban megadott kódoszlopok nem).",
+            "\"help\" → \"examReplacements\" és \"offlineReplacements\": a vizsgaváltozatban, illetve a példákat tartalmazó offline változatban a bal oldali szöveggel kezdődő súgósor helyett a jobb oldali jelenik meg. Úgy fordítsd, hogy a bal oldal pontosan a lefordított súgósor eleje legyen.",
+            "\"help\" → \"download\": a letöltési oldal szövegei a vizsgaváltozat telepítőihez ({version} és {file} helyőrzővel)."
+          ],
+          "Saját gépen is ellenőrizheted a fájlt, a repó mappájában: node tools/languages.mjs (Node.js 18 vagy újabb kell hozzá), vagy csak Dockerrel: docker run --rm -v \"$PWD\":/w -w /w node:20-alpine node tools/languages.mjs. Az ERROR sorokat javítani kell, a note sorok csak azt sorolják fel, mi maradt még angolul.",
+          "A beépített példaprogramok és a pszeudokód csak angolul és magyarul érhetők el; más nyelveken angolul jelennek meg."
+        ]
       }
     ],
     "examReplacements": {
       "Fájlok, példák, forráskód": "Fájlok, forráskód",
-      "Új:": "Új: üres programot kezd (dolgozat üzemmódban nincsenek beépített példák).",
-      "Frissítés:": "Dolgozat üzemmód: ez a telepített, internet nélkül működő változat dolgozatokhoz és vizsgákhoz. Nincsenek benne beépített példák, és nem keres frissítést.",
-      "Mentés:": "Mentés: .flow fájlba. Megnyitás: .flow fájl, vagy a Flowgorithm programmal készült .fprg fájl (amit az alkalmazás nem ismer, pl. a teknőcgrafika, arról szól). A megnyitott program bezáráskor is megmarad, a következő indításkor visszajön."
+      "Új:": "Új: üres programot kezd (dolgozatüzemmódban nincsenek beépített példák).",
+      "Frissítés:": "Dolgozatüzemmód: ez a telepített, internet nélkül működő változat dolgozatokhoz és vizsgákhoz. Nincsenek benne beépített példák, és nem keres frissítést.",
+      "Mentés:": "Mentés: .flow fájlba. Megnyitás: .flow fájl vagy a Flowgorithm programmal készült .fprg fájl (ha olyasmit tartalmaz, amit az alkalmazás nem ismer, pl. teknőcgrafikát, arról üzenetet kapsz). A megnyitott program bezáráskor is megmarad, a következő indításkor visszajön.",
+      "Kipróbálható példa:": "Próbáld ki: jelölj ki néhány szimbólumot Ctrl + kattintással, majd kattints jobb gombbal az egyikre, és válaszd a „Megjegyzés a kijelöltekhez…” menüpontot.",
+      "Mentés, példák, forráskód": "Mentés, forráskód"
+    },
+    "offlineReplacements": {
+      "Mentés:": "Mentés: .flow fájlba. Megnyitás: .flow fájl vagy a Flowgorithm programmal készült .fprg fájl (ha olyasmit tartalmaz, amit az alkalmazás nem ismer, pl. teknőcgrafikát, arról üzenetet kapsz). A megnyitott program bezáráskor is megmarad, a következő indításkor visszajön.",
+      "Frissítés:": "Offline változat példákkal: ez a telepített, internet nélkül működő változat, a beépített példákkal együtt. Nem keres frissítést: az új verziót a letöltési oldalról telepítheted."
     },
     "download": {
       "title": "Vizsgaváltozat letöltése ({version} verzió)",
@@ -681,10 +771,10 @@
       "points": [
         {
           "title": "Példák nélkül",
-          "text": "nincsenek benne beépített minták és kész programok, az Új mindig üres programot kezd"
+          "text": "nincsenek benne beépített minták és kész programok, az „Új” gomb mindig üres programot kezd"
         },
         {
-          "title": "Teljesen offline",
+          "title": "Offline",
           "text": "internetkapcsolat nélkül fut, semmit nem tölt le, és nem is keres frissítést"
         },
         {
@@ -703,11 +793,37 @@
       },
       "exe": {
         "label": "Windows · .exe telepítő",
-        "note": "Windows 10 és 11 (64 bites); ha a SmartScreen figyelmeztet: További információ, majd Futtatás mindenképp"
+        "note": "ha a SmartScreen figyelmeztet, kattints a „További információ”, majd a „Futtatás mindenképp” gombra"
       },
       "msi": {
         "label": "Windows · .msi csomag",
         "note": "iskolai gépekre, rendszergazdáknak: csendes vagy központi telepítés, pl. msiexec /i {file} /qn"
+      },
+      "offline": {
+        "title": "Offline változat példákkal ({version} verzió)",
+        "lead": "Telepíthető asztali változat órákra és otthoni gyakorláshoz. Ugyanaz a Folyáb, mint itt a böngészőben, a példákkal együtt, de:",
+        "points": [
+          {
+            "title": "Példákkal",
+            "text": "benne vannak a beépített példák, a tankönyvi példák is"
+          },
+          {
+            "title": "Offline",
+            "text": "internetkapcsolat nélkül fut, semmit nem tölt le, és nem is keres frissítést"
+          },
+          {
+            "title": "Nem vizsgára",
+            "text": "dolgozathoz és érettségihez a fenti, példák nélküli vizsgaváltozatot használd"
+          }
+        ],
+        "appImage": {
+          "label": "Linux · AppImage",
+          "note": "telepítés nélkül, bármely disztribúción: futtathatóvá kell tenni (chmod +x), majd elindítani"
+        },
+        "exe": {
+          "label": "Windows · .exe telepítő",
+          "note": "ha a SmartScreen figyelmeztet, kattints a „További információ”, majd a „Futtatás mindenképp” gombra"
+        }
       }
     }
   }

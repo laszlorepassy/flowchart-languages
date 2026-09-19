@@ -97,6 +97,8 @@ function checkHelp(help, refHelp, err, warn) {
     help.sections.forEach((s, i) => {
       const where = `help section ${i + 1}`;
       if (!isObject(s) || !isString(s.title)) { err(`${where} needs a "title" text`); return; }
+      if ('chapter' in s && !isString(s.chapter)) err(`${where} ("${s.title}"): "chapter" (the title of the chapter it starts) must be a text`);
+      if (i === 0 && !('chapter' in s)) warn('the first help section starts no "chapter": the table of contents begins without one');
       if ('table' in s) {
         const tbl = s.table;
         if (!isObject(tbl) || !Array.isArray(tbl.head) || !tbl.head.every(isString) || !Array.isArray(tbl.rows)) {
@@ -126,6 +128,10 @@ function checkHelp(help, refHelp, err, warn) {
     const ex = help.examReplacements;
     if (!isObject(ex) || !Object.values(ex).every(isString)) err('"help.examReplacements" must map texts to texts');
   } else warn('no "help.examReplacements": the exam edition shows the help lines about examples and updates unchanged');
+  if ('offlineReplacements' in help) {
+    const off = help.offlineReplacements;
+    if (!isObject(off) || !Object.values(off).every(isString)) err('"help.offlineReplacements" must map texts to texts');
+  } else warn('no "help.offlineReplacements": the offline edition shows the help lines about the browser and updates unchanged');
   if ('download' in help) {
     const d = help.download;
     if (!isObject(d)) { err('"help.download" must be an object'); return; }
@@ -138,6 +144,23 @@ function checkHelp(help, refHelp, err, warn) {
       const b = d[kind];
       if (!isObject(b) || !isString(b.label) || !isString(b.note)) err(`"help.download.${kind}" needs "label" and "note" texts`);
       else if (placeholders(b.note).some((p) => p !== 'file' && p !== 'version')) err(`"help.download.${kind}.note" may only use {file} and {version}`);
+    }
+    // The offline edition's panel (optional: without it, it is shown in English).
+    if ('offline' in d) {
+      const o = d.offline;
+      if (!isObject(o)) err('"help.download.offline" must be an object');
+      else {
+        for (const key of ['title', 'lead']) if (!isString(o[key])) err(`"help.download.offline.${key}" must be a text`);
+        if (isString(o.title) && !placeholders(o.title).includes('version')) err('"help.download.offline.title" must contain {version}');
+        if (!Array.isArray(o.points) || !o.points.every((p) => isObject(p) && isString(p.title) && isString(p.text))) {
+          err('"help.download.offline.points" must be a list of { "title", "text" }');
+        }
+        for (const kind of ['appImage', 'exe']) {
+          const b = o[kind];
+          if (!isObject(b) || !isString(b.label) || !isString(b.note)) err(`"help.download.offline.${kind}" needs "label" and "note" texts`);
+          else if (placeholders(b.note).some((p) => p !== 'file' && p !== 'version')) err(`"help.download.offline.${kind}.note" may only use {file} and {version}`);
+        }
+      }
     }
   } else warn('no "help.download": the download panel is shown in English');
 }

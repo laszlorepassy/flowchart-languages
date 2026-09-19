@@ -8,7 +8,8 @@
     ]
   },
   "messages": {
-    "appTitle": "Folyab",
+    "appTitle": "Folyab - Flowchart",
+    "appName": "Folyab",
     "menuNew": "New",
     "menuOpen": "Open…",
     "menuSave": "Save",
@@ -40,7 +41,7 @@
     "copyCode": "Copy",
     "downloadCode": "Download",
     "pseudocode": "Pseudocode",
-    "routineMain": "Main Program",
+    "routineMain": "Main program",
     "addRoutine": "+ Routine",
     "editRoutine": "Edit routine",
     "deleteRoutine": "Delete routine",
@@ -78,19 +79,32 @@
     "labelCondition": "Condition",
     "labelPrompt": "Prompt (optional)",
     "labelNewline": "New line after output",
-    "labelStart": "Start Value",
-    "labelEnd": "End Value",
-    "labelStepBy": "Step Value",
+    "labelStart": "Start value",
+    "labelEnd": "End value",
+    "labelStepBy": "Step value",
     "labelRoutineToCall": "Routine to call",
     "labelArguments": "Arguments",
     "labelText": "Text",
     "labelIsArray": "Array?",
     "labelArraySize": "Array size",
     "labelVariable": "Variable",
-    "labelVariableNames": "Variable Names (comma-separated)",
+    "labelVariableNames": "Variable names (comma-separated)",
+    "labelAllFields": "All fields at once",
+    "allFieldsEmpty": "Give at least one field a value.",
+    "structAssignGroup": "Assigning the fields of {name}",
     "byRef": "by reference",
-    "byRefArgHint": "This parameter is by reference: enter a plain variable name here.",
+    "byRefArgHint": "This parameter is passed by reference: enter a plain variable name here.",
     "langLabel": "Language",
+    "settingsTitle": "Settings",
+    "uiZoomLabel": "Size",
+    "uiZoomIn": "Zoom in",
+    "uiZoomOut": "Zoom out",
+    "uiZoomReset": "Original size (100%)",
+    "settingsVersion": "Version",
+    "editionWeb": "web edition",
+    "editionExam": "exam edition",
+    "editionOffline": "offline edition with examples",
+    "downloadPageLink": "Open the download page",
     "resizePanel": "Drag to resize the panel",
     "start": "Start",
     "end": "End",
@@ -102,17 +116,17 @@
     "errNotArray": "Variable \"{name}\" is not an array.",
     "errArrayNeedsIndex": "\"{name}\" is an array — use an index, e.g. {name}[0].",
     "errIndexOutOfRange": "Index out of range for array \"{name}\".",
-    "errByRefNeedsVariable": "Parameter \"{name}\" is by reference and needs a plain variable name as its argument.",
+    "errByRefNeedsVariable": "Parameter \"{name}\" is passed by reference and needs a plain variable name as its argument.",
     "errInvalidAssignTarget": "\"{name}\" is not a valid assignment target.",
     "errTooManySteps": "Execution stopped: too many steps (possible infinite loop).",
     "errDivisionByZero": "Division by zero ({operator}).",
     "errInvalidBoolean": "\"{value}\" is not a Boolean value (use true or false).",
-    "errWrongArgCount": "\"{name}\" needs {expected} argument(s), but got {actual}.",
+    "errWrongArgCount": "\"{name}\" expects {expected} argument(s) but was given {actual}.",
     "errParamTypeMismatch": "The by-reference parameter \"{param}\" is {expected}, but the variable passed is {actual}.",
-    "errNotAFunction": "\"{name}\" is a procedure: it has no value, call it with a Call symbol.",
+    "errNotAFunction": "\"{name}\" is a procedure: it returns no value; call it with a Call symbol.",
     "errStackOverflow": "Too many nested calls (runaway recursion?).",
     "errForStepZero": "The step of a For loop can't be 0.",
-    "errInvalidArraySize": "Invalid array size: {value} (0 to 1000000).",
+    "errInvalidArraySize": "Invalid array size: {value} (allowed: 0 to 1,000,000).",
     "errInvalidNumber": "\"{value}\" is not a number.",
     "errFileNotOpen": "The file \"{name}\" is not open (use an Open File symbol first).",
     "errFileAlreadyOpen": "The file \"{name}\" is already open.",
@@ -135,7 +149,7 @@
     "nothingToRun": "Nothing to run yet — build a flowchart first.",
     "fileLoadError": "Could not read this file — it may not be a valid .flow or Flowgorithm .fprg file.",
     "duplicateRoutineName": "This name is already used by a routine, a struct or a type.",
-    "invalidName": "Please enter a valid name (letters, digits, underscore, starting with a letter).",
+    "invalidName": "Please enter a valid name (letters, digits and underscores, starting with a letter).",
     "fitToScreen": "Fit",
     "addStruct": "+ Struct",
     "editStruct": "Edit struct",
@@ -143,22 +157,38 @@
     "addField": "+ Field",
     "confirmDeleteStruct": "Delete this struct?",
     "structInUse": "The struct \"{name}\" is still used (by a variable, parameter, return type or another struct), so it can't be deleted.",
-    "invalidFieldName": "Every field needs a valid name (letters, digits, underscore, starting with a letter).",
+    "invalidFieldName": "Every field needs a valid name (letters, digits and underscores, starting with a letter).",
     "duplicateFieldName": "Two fields have the same name.",
-    "invalidVariableName": "\"{name}\" can't be a name: use a letter first, then letters, digits or _, and not a reserved word or built-in function name.",
+    "invalidVariableName": "\"{name}\" can't be used as a name: start with a letter, use only letters, digits or _, and avoid reserved words and built-in function names.",
     "duplicateParamName": "Two parameters have the same name.",
     "paramNamedLikeRoutine": "A parameter can't have the routine's own name.",
     "routineInUse": "The routine \"{name}\" is still called somewhere, so it can't be deleted.",
     "structTabTitle": "Struct — click to edit",
     "blockBreakpoint": "Breakpoint",
     "labelBreakpointCondition": "Stop only when (optional condition, e.g. i = 4)",
-    "labelFileNameOptional": "File name (empty: the last opened file)",
+    "labelFileNameOptional": "File name (leave empty for the most recently opened file)",
     "importSkipped": "These parts of the Flowgorithm file aren't supported and were left out: {list}.",
     "turtleGraphics": "turtle graphics",
     "blockFileopen": "Open File",
     "blockFileread": "Read from File",
     "blockFilewrite": "Write to File",
     "blockFileclose": "Close File",
+    "blockRegion": "Commented Section",
+    "regionNew": "Comment on the selection…",
+    "regionNewHint": "The symbols (the selected ones and everything between them) get a note with this comment before them, a dot below it, and its pair at the end. Click either dot to collapse the section.",
+    "regionRemove": "Remove comment",
+    "confirmRemoveRegion": "Remove this comment? The symbols stay.",
+    "confirmDeleteRegion": "Delete the section together with its symbols?",
+    "regionCollapsedLabel": "Collapsed",
+    "regionCollapsedHint": "{count} symbols — click to expand",
+    "regionExpand": "Expand the section",
+    "regionCollapse": "Collapse the section",
+    "regionEditHint": "Click to edit the comment",
+    "selectionClear": "Clear the selection",
+    "menuCut": "Cut",
+    "regionNewOne": "Add a comment…",
+    "breakpointSet": "Set breakpoint",
+    "breakpointRemove": "Remove breakpoint",
     "fileOpenShort": "Open",
     "fileReadShort": "Read",
     "fileWriteShort": "Write",
@@ -185,34 +215,43 @@
     "fileNameLabel": "Name",
     "confirmDeleteFile": "Delete the file \"{name}\"?",
     "confirmOverwriteFile": "A file named \"{name}\" already exists. Replace it?",
-    "invalidFileName": "Use letters, digits, space, dot, dash or underscore in a file name.",
+    "invalidFileName": "Use only letters, digits, spaces, dots, hyphens or underscores in a file name.",
     "fileNameTaken": "A file with this name already exists.",
-    "filesStorageFull": "The browser storage is full: the files are kept only until the page is closed. Download what you need.",
+    "filesStorageFull": "Browser storage is full: files are kept only until the page is closed. Download what you need.",
     "emptyProject": "Empty project",
     "examModeBadge": "exam mode",
+    "offlineEditionBadge": "with examples",
     "backToApp": "Back to the app",
     "enlargeCode": "Enlarge",
-    "versionLabel": "version {version} ({date})",
+    "versionLabel": "version {version}",
     "versionDevelopment": "development version",
     "copyrightNotice": "© 2026 László Répássy. All rights reserved.",
     "translatedBy": "Translation: {names}",
-    "appUpdated": "The app was updated to its newest version; your program was kept.",
+    "appUpdated": "The app has been updated to the latest version; your program was kept.",
     "menuHelp": "Help",
     "helpTitle": "Help",
-    "helpPageTitle": "Folyab Help",
+    "helpPageTitle": "Folyab - Flowchart Help",
+    "helpContents": "Contents",
+    "downloadLink": "Download",
+    "websiteLink": "Website",
+    "downloadPageLead": "Flowchart-based programming in the browser, or in exam mode, as installed software.",
+    "onlineAppAction": "Start",
+    "onlineAppLabel": "Online app",
+    "onlineAppNote": "right in the browser, no installation, with built-in examples and help",
     "labelBreakpoint": "Breakpoint (the run stops here)",
     "pausedAtBreakpoint": "Stopped at a breakpoint.",
     "examplesTitle": "New program",
-    "examplesIntro": "Pick an example: its program is loaded and can be edited and continued like your own.",
+    "examplesIntro": "Pick an example: it opens as a program you can edit and extend like your own.",
     "confirmLoadExample": "Load this example? The current program will be replaced (unsaved changes will be lost)."
   },
   "help": {
     "sections": [
       {
+        "chapter": "Editing the flowchart",
         "title": "Adding symbols",
         "content": [
           "Click any arrow (connector) in the flowchart: a symbol picker opens, and the symbol you pick is inserted there.",
-          "The new symbol opens for editing right away. In every popup, Enter presses the default (blue) button, e.g. Save or OK; Esc closes the popup."
+          "The new symbol opens for editing right away. In every dialog, Enter presses the default (blue) button, e.g. Save or OK; Esc closes the dialog."
         ]
       },
       {
@@ -222,20 +261,41 @@
         ]
       },
       {
-        "title": "Right mouse button: cut and paste",
+        "title": "Right-click menu, cut and paste",
         "content": [
           [
-            "Right-click a symbol to cut it (an If or loop moves together with everything inside it). A badge in the header shows what was cut.",
+            "Right-click a symbol for its menu: edit, cut, add a comment (to the selection, if the symbol is selected), set or remove a breakpoint, delete.",
+            "Cut takes the symbol out (an If or loop moves together with everything inside it). A badge in the header shows what was cut.",
             "Right-click an arrow to paste it there. With nothing cut, the symbol picker opens instead.",
             "Click the badge in the header to discard the cut symbol (it is then lost)."
           ]
         ]
       },
       {
+        "title": "Commenting and collapsing groups of symbols",
+        "content": [
+          [
+            "Ctrl + click symbols to select them (a dashed blue outline); Ctrl + click a selected symbol again to deselect it. Esc or clicking an empty area clears the selection.",
+            "Right-click a selected symbol and choose \"Comment on the selection…\" (or any symbol and \"Add a comment…\"): your comment goes on a note at the start of the section, with a dot below it, and the dot's pair goes on the arrow at the end of the section.",
+            "Click either dot and the two dots join, hiding the symbols between them (like #region in C#), e.g. the declarations; click the joined dot to expand it again. Click the note to edit the comment; right-click it to collapse, expand, remove the comment (the symbols stay) or delete the whole section.",
+            "A collapsed section runs exactly as its symbols would. In the generated code it is a comment (in C#, a #region).",
+            "An example to try: the \"Comments, collapsible sections\" program in the Basics group of the New dialog."
+          ]
+        ]
+      },
+      {
+        "title": "View",
+        "content": [
+          "Use the bottom-right controls to zoom in (+), zoom out (−) or fit the whole diagram (⛶). Drag the empty background to scroll. Drag the divider between the diagram and the side panel to set the panel width — this browser remembers it. Dialogs can be moved by dragging their title bar (or any empty part of them).",
+          "Settings: click the wrench at the top right to choose the language and to set the size of the whole app in percent (− and + shrink and enlarge it at once; the browser remembers it). It also shows the version and which edition you use (web, exam or offline with examples), and opens the download page."
+        ]
+      },
+      {
+        "chapter": "Procedures, structs, files",
         "title": "Procedures and functions",
         "content": [
           "Use the \"+ Routine\" tab to create a procedure or function with parameters; edit it with the ✎ icon. Call it with a Call symbol or from an expression, e.g. Double(n).",
-          "A function's return value is the value of the variable named after the function when it ends. A parameter marked \"by reference\" changes the caller's variable; arrays are always passed by reference."
+          "A function's return value is the value that the variable named after the function holds when the function ends. A parameter marked \"by reference\" changes the caller's variable; arrays are always passed by reference."
         ]
       },
       {
@@ -243,6 +303,7 @@
         "content": [
           "Use \"+ Struct\" to create your own type with a name and fields (e.g. Point: x, y). A field can be of a basic type or another struct. Click a struct's tab to edit, rename or delete it.",
           "A struct can be chosen anywhere a type is: in Declare (also as an array), for parameters and as a function's return type. Access fields with a dot: p.x, t[i].name, r.corner.x — in expressions, assignments and Input.",
+          "A struct can get all its fields at once: in Assign, enter the struct variable (e.g. p), tick \"All fields at once\" and fill in the fields. It is saved as one assignment per field, together in a collapsed commented section (\"Assigning the fields of p\").",
           "Assignment (b = a) and by-value parameters copy the struct; a by-reference parameter changes the original."
         ]
       },
@@ -252,17 +313,18 @@
           [
             "On the Files tab you can upload files, create new ones, view and edit their content, rename, download and delete them. Files are kept in this browser.",
             "A program refers to a file by its name, as a String: \"file-a\". Symbols: Open File (for reading, writing or appending), Read from File (reads one line into a variable), Write to File, Close File.",
-            "eof(\"file-a\") is true when a file open for reading has no more lines — e.g. a loop: while not eof(\"file-a\"). Read, Write, Close and EOF() may leave the file name out: then they use the most recently opened file (the way Flowgorithm handles files).",
+            "eof(\"file-a\") is true when a file open for reading has no more lines — e.g. a loop: while not eof(\"file-a\"). Read, Write, Close and EOF() can omit the file name, in which case they use the most recently opened file (the way Flowgorithm handles files).",
             "Opening a file for writing creates (or overwrites) it; what the program creates appears on the Files tab right away, ready to download."
           ]
         ]
       },
       {
+        "chapter": "Running and debugging",
         "title": "Running",
         "content": [
           [
-            "▶ Run executes the program; the symbol being executed is highlighted in blue. Set the pace with the Speed selector.",
-            "⏸ Pause stops the run; continue with ▶ or ⏭.",
+            "▶ Run executes the program. The symbol being executed is highlighted in blue: the Start symbol lights up first, and the End symbol lights up last, when the program has finished. Set the pace with the Speed selector.",
+            "⏸ Pause pauses the run; continue with ▶ or ⏭.",
             "⟲ Reset starts over and clears the console and variables.",
             "An Input symbol asks for a value on the Console tab; the program waits until you enter it."
           ]
@@ -278,8 +340,8 @@
         "title": "Debugging",
         "content": [
           [
-            "Breakpoint: Shift + click a symbol, or tick \"Breakpoint\" in its editor. A red dot in the corner of the symbol marks it.",
-            "When running, the program stops at a breakpoint before executing that symbol, and switches to the Variables tab.",
+            "Breakpoint: Shift + click a symbol, or select \"Breakpoint\" in its editor. A red dot in the corner of the symbol marks it.",
+            "During a run, the program stops at a breakpoint before executing that symbol, and switches to the Variables tab.",
             "Variables changed by the last step are highlighted in yellow.",
             "Continue step by step (⏭) or to the next breakpoint (▶).",
             "Breakpoint symbol (as in Flowgorithm): the run stops when it gets there — with a condition (e.g. i = 4), only when the condition is true.",
@@ -288,23 +350,7 @@
         ]
       },
       {
-        "title": "Expressions",
-        "content": [
-          [
-            "Arrays: t[i], indexed from 0. Struct fields: p.x, t[i].name.",
-            "Strings in quotes: \"apple\" or 'apple' (no escape sequences; \\ is an ordinary character).",
-            "Names (variables, routines) start with a letter and contain letters and digits; case doesn't matter.",
-            "The full list of operators and functions is in the tables below."
-          ]
-        ]
-      },
-      {
-        "title": "View",
-        "content": [
-          "Use the bottom-right controls to zoom in (+), zoom out (−) or fit the whole diagram (⛶). Drag the empty background to scroll. Drag the divider between the diagram and the side panel to set the panel width — this browser remembers it. Popups can be moved by dragging their title (or any empty part of them)."
-        ]
-      },
-      {
+        "chapter": "Saving, examples, source code",
         "title": "Files, examples, source code",
         "content": [
           [
@@ -312,9 +358,21 @@
             "Save: to a .flow file. Open: a .flow file, or a .fprg file made with Flowgorithm (anything the app doesn't support, e.g. turtle graphics, is reported). Your program is also kept in this browser.",
             "Updates: when a new version of the app comes out, the page updates itself as soon as no program is running and no dialog is open — the open program and the view are kept.",
             "The buttons in the header are icon-only (New, Open, Save, Export Image, then the run controls): hover over one to see which is which. Export Image makes a PNG image of the flowchart.",
-            "New: the window shown at start — an empty project or ready-made examples (algorithms, structs, files); a loaded example can be edited and continued as if you had written it.",
+            "New: the dialog shown at start — an empty project or ready-made examples (examples from the Hungarian Digital Culture textbooks, algorithms, structs, files); a loaded example can be edited and extended as if you had written it.",
             "The Code tab generates Python, C++ or C# source code from the program — highlighted, with line numbers; Enlarge shows it in a big window.",
             "Pseudocode writes the program in the app's language: in English, the pseudocode of Cambridge International AS & A Level Computer Science (DECLARE, IF … THEN … ENDIF, FOR … NEXT, PROCEDURE, FUNCTION … RETURNS); in Hungarian, the mondatszerű leírás taught at ELTE. Arrays and strings are indexed from 0 here too, as in the flowchart."
+          ]
+        ]
+      },
+      {
+        "chapter": "Expressions, operators, functions",
+        "title": "Expressions",
+        "content": [
+          [
+            "Arrays: t[i], indexed from 0. Struct fields: p.x, t[i].name.",
+            "Strings in quotes: \"apple\" or 'apple' (no escape sequences; \\ is an ordinary character).",
+            "Names (variables, routines) start with a letter and contain letters, digits and underscores; case doesn't matter.",
+            "The full list of operators and functions is in the tables below."
           ]
         ]
       },
@@ -341,19 +399,19 @@
               "≠"
             ],
             [
-              "Less / greater",
+              "Less than / greater than",
               "<  >",
               "<  >",
               "<  >"
             ],
             [
-              "Less or equal",
+              "Less than or equal",
               "<=",
               "<=",
               "≤"
             ],
             [
-              "Greater or equal",
+              "Greater than or equal",
               ">=",
               ">=",
               "≥"
@@ -407,7 +465,7 @@
               ""
             ],
             [
-              "Exponent",
+              "Power",
               "",
               "^",
               "↑"
@@ -441,29 +499,29 @@
               "-2 ^ 2 = 4"
             ],
             [
-              "7 – exponent",
+              "7 – exponentiation",
               "^  ↑",
               "right-associative: 2 ^ 3 ^ 2 = 512"
             ],
             [
-              "6 – multiply",
+              "6 – multiplicative",
               "*  ×  /  ÷  %  mod  div",
               "6 / 3 * 2 = 4 (left to right)"
             ],
             [
-              "5 – addition",
+              "5 – additive",
               "+  -",
               ""
             ],
             [
-              "4 – concatenate",
+              "4 – concatenation",
               "&",
               "\"n=\" & 1 + 2 → \"n=3\""
             ],
             [
               "3 – relational",
               "=  ==  <>  !=  ≠  <  >  <=  ≤  >=  ≥",
-              "not chainable (instead of 1 < x < 5: 1 < x and x < 5)"
+              "not chainable (write 1 < x and x < 5, not 1 < x < 5)"
             ],
             [
               "2 – and",
@@ -522,7 +580,7 @@
             ],
             [
               "Int(n)",
-              "whole part (drops the fraction)",
+              "integer part (drops the fractional part)",
               "Int(3.9) → 3"
             ],
             [
@@ -533,7 +591,7 @@
             [
               "Random(n)",
               "random integer from 0 to n-1",
-              "Random(6) + 1 → a die"
+              "Random(6) + 1 → a die roll"
             ],
             [
               "Len(s)",
@@ -557,7 +615,7 @@
             ],
             [
               "ToFixed(r, i)",
-              "real number as a string with i decimals",
+              "real number as a string with i decimal places",
               "ToFixed(3.14159, 2) → \"3.14\""
             ],
             [
@@ -622,7 +680,7 @@
             ],
             [
               "Upper(s), Lower(s), Trim(s)",
-              "upper case, lower case, trim spaces"
+              "uppercase, lowercase, remove leading and trailing spaces"
             ],
             [
               "Length(x)",
@@ -630,7 +688,7 @@
             ],
             [
               "Sign(n), Asin(n), Acos(n), Atan(n), Ascii(c)",
-              "other names of Sgn, Arcsin, Arccos, Arctan, ToCode"
+              "alternative names for Sgn, Arcsin, Arccos, Arctan, ToCode"
             ]
           ],
           "codeColumns": [
@@ -659,7 +717,7 @@
               "Integer, Real, String, Boolean"
             ],
             [
-              "Not allowed as a routine or struct name",
+              "Not allowed as a name",
               "the words above and the names of built-in functions (e.g. Len, Max, ToString)"
             ]
           ],
@@ -667,13 +725,45 @@
             1
           ]
         }
+      },
+      {
+        "chapter": "Languages",
+        "title": "Adding a language",
+        "content": [
+          "Each language of the app is a JSON file in the languages/ folder of the public https://github.com/laszlorepassy/flowchart-languages repository, named after the language's code: de.json (German), fr.json (French), pt-BR.json (Brazilian Portuguese), and so on. The reference is languages/en.json (English); languages/hu.json is the Hungarian file. Anyone can add a new language or improve an existing one.",
+          [
+            "1. Sign in to GitHub, open the repository and fork it (the Fork button).",
+            "2. In your fork, copy languages/en.json to languages/<code>.json, e.g. languages/de.json. The code is the language's two-letter ISO 639-1 code, optionally followed by a region (pt-BR).",
+            "3. Fill in the \"language\" block: \"code\" (the file name without .json), \"name\" (the language's name in English), \"nativeName\" (its own name, shown in the settings' language choice) and \"translators\" (your name, shown at the bottom of the help).",
+            "4. Translate only the values (after the colon), never the keys (before the colon). You can edit on GitHub itself (the pencil icon) or in any text editor that saves files as UTF-8.",
+            "5. Send a pull request to the repository. The \"Validate language files\" check runs automatically and tells you exactly what is left to fix.",
+            "6. An accepted language appears in the next version of the web app and the desktop editions, in the settings and among the help's language buttons."
+          ],
+          "You don't have to translate everything at once: a message you leave out is shown in English, and without the \"help\" block the help is shown in English.",
+          [
+            "\"messages\" is the user interface: buttons, menus, error messages. Keep short texts short: buttons and tabs have little room.",
+            "Placeholders in curly braces, e.g. {name}, {expected}, {file}, are filled in by the app: keep each one exactly as it is, but put it wherever your language needs it in the sentence.",
+            "Code is not translated: the flowchart language's keywords and functions (and, or, not, mod, Len, ToString, eof…), the type names (Integer, Real, String, Boolean), examples written in them, file names and commands stay as they are.",
+            "\"help\" → \"sections\" is the help: every section has a \"title\" and either \"content\" (a string is a paragraph; a list of strings is a bulleted list) or a \"table\" (translate the head and the text cells, not the code columns listed in \"codeColumns\").",
+            "\"help\" → \"examReplacements\" and \"offlineReplacements\": in the exam edition and the offline edition, a help line starting with the text on the left is shown as the text on the right. Translate both so that the left side is exactly the start of your translated help line.",
+            "\"help\" → \"download\": the download page's texts for the exam edition's installers (with the {version} and {file} placeholders)."
+          ],
+          "You can check the file on your own computer too, in the repository's folder: node tools/languages.mjs (needs Node.js 18 or newer), or with only Docker: docker run --rm -v \"$PWD\":/w -w /w node:20-alpine node tools/languages.mjs. ERROR lines must be fixed; note lines only list what is still in English.",
+          "The built-in example programs and the pseudocode view exist in English and Hungarian only; in other languages they are shown in English."
+        ]
       }
     ],
     "examReplacements": {
       "Files, examples, source code": "Files, source code",
-      "New:": "New: starts an empty program (exam mode has no built-in examples).",
-      "Updates:": "Exam mode: this is the installed edition for tests and exams, working without an internet connection. It has no built-in examples and never looks for updates.",
-      "Save:": "Save: to a .flow file. Open: a .flow file, or a .fprg file made with Flowgorithm (anything the app doesn't support, e.g. turtle graphics, is reported). The open program is also kept when the app is closed, and comes back the next time."
+      "New:": "New: starts an empty program (the exam edition has no built-in examples).",
+      "Updates:": "Exam edition: this installed edition is for tests and exams and works without an internet connection. It has no built-in examples and never looks for updates.",
+      "Save:": "Save: to a .flow file. Open: a .flow file, or a .fprg file made with Flowgorithm (anything the app doesn't support, e.g. turtle graphics, is reported). The open program is also kept when the app is closed and reopens the next time you start it.",
+      "An example to try:": "Try it: select a few symbols with Ctrl + click, then right-click one of them and choose \"Comment on the selection…\".",
+      "Saving, examples, source code": "Saving, source code"
+    },
+    "offlineReplacements": {
+      "Save:": "Save: to a .flow file. Open: a .flow file, or a .fprg file made with Flowgorithm (anything the app doesn't support, e.g. turtle graphics, is reported). The open program is also kept when the app is closed and reopens the next time you start it.",
+      "Updates:": "Offline edition with examples: this is the installed edition that works without an internet connection, with the built-in examples. It never looks for updates: install a new version from the download page."
     },
     "download": {
       "title": "Download the exam edition (version {version})",
@@ -681,10 +771,10 @@
       "points": [
         {
           "title": "No examples",
-          "text": "no built-in samples or ready-made programs; New always starts an empty program"
+          "text": "no built-in examples or ready-made programs; the \"New\" button always starts an empty program"
         },
         {
-          "title": "Fully offline",
+          "title": "Offline",
           "text": "runs without an internet connection, downloads nothing and never looks for updates"
         },
         {
@@ -703,11 +793,37 @@
       },
       "exe": {
         "label": "Windows · .exe installer",
-        "note": "Windows 10 and 11 (64-bit); if SmartScreen warns: More info, then Run anyway"
+        "note": "if SmartScreen warns you, click \"More info\", then \"Run anyway\""
       },
       "msi": {
         "label": "Windows · .msi package",
-        "note": "for school machines and administrators: silent or central install, e.g. msiexec /i {file} /qn"
+        "note": "for school machines and administrators: silent or centrally managed installation, e.g. msiexec /i {file} /qn"
+      },
+      "offline": {
+        "title": "Offline edition with examples (version {version})",
+        "lead": "An installable desktop edition for lessons and practice at home. The same Folyab as here in the browser, examples included, but:",
+        "points": [
+          {
+            "title": "With examples",
+            "text": "all the built-in examples are included, the textbook examples too"
+          },
+          {
+            "title": "Offline",
+            "text": "runs without an internet connection, downloads nothing and never looks for updates"
+          },
+          {
+            "title": "Not for exams",
+            "text": "for tests and exams, use the exam edition above, which has no examples"
+          }
+        ],
+        "appImage": {
+          "label": "Linux · AppImage",
+          "note": "no installation, any distribution: make it executable (chmod +x), then run it"
+        },
+        "exe": {
+          "label": "Windows · .exe installer",
+          "note": "if SmartScreen warns you, click \"More info\", then \"Run anyway\""
+        }
       }
     }
   }
