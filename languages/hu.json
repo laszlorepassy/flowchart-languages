@@ -14,6 +14,8 @@
     "menuOpen": "Megnyitás…",
     "menuSave": "Mentés",
     "menuSaveAs": "Mentés másként…",
+    "menuUndo": "Visszavonás (Ctrl+Z)",
+    "menuRedo": "Újra (Ctrl+Y)",
     "menuExportImage": "Kép exportálása",
     "generateCode": "Forráskód generálása",
     "programNamePlaceholder": "Program neve",
@@ -174,8 +176,13 @@
     "blockFilewrite": "Írás fájlba",
     "blockFileclose": "Fájl bezárása",
     "blockRegion": "Szakasz megjegyzéssel",
-    "regionNew": "Megjegyzés a kijelöltekhez…",
-    "regionNewHint": "A szimbólumok (a kijelöltek és a köztük lévők) elé egy jegyzetlap kerül a megjegyzéssel, alá egy pötty, a szakasz végére a párja. Bármelyik pöttyre kattintva összecsukhatod a szakaszt.",
+    "regionDefaultText": "{count} szimbólum",
+    "regionCollapseMenu": "Összecsukás…",
+    "regionDialogTitle": "Összecsukás",
+    "labelComment": "Megjegyzés (a szakasz neve)",
+    "regionHiddenLabel": "{count} szimbólum elrejtve",
+    "regionEndLabel": "vége: {text}",
+    "regionNewHint": "A szimbólumok (és a köztük lévők) egy szakaszba kerülnek: felül a megjegyzés, a − jellel összecsukható, a + jellel kinyitható. A megjegyzés utólag is átírható, ha rákattintasz.",
     "regionRemove": "Megjegyzés törlése",
     "confirmRemoveRegion": "Törlöd a megjegyzést? A szimbólumok megmaradnak.",
     "confirmDeleteRegion": "Törlöd a szakaszt a benne lévő szimbólumokkal együtt?",
@@ -186,7 +193,6 @@
     "regionEditHint": "Kattints a megjegyzés szerkesztéséhez",
     "selectionClear": "Kijelölés megszüntetése",
     "menuCut": "Kivágás",
-    "regionNewOne": "Megjegyzés hozzáfűzése…",
     "breakpointSet": "Töréspont beállítása",
     "breakpointRemove": "Töréspont törlése",
     "fileOpenShort": "Megnyit",
@@ -261,6 +267,14 @@
         ]
       },
       {
+        "title": "Visszavonás és újra",
+        "content": [
+          "A fejlécben, a Mentés és a Kép exportálása gomb között áll a Visszavonás (visszafelé hajló nyíl) és mellette az Újra gomb. A Visszavonás a szerkesztés előző állapotát hozza vissza, és sok lépésen át visszamehetsz vele – egészen addig, ahogy a program a megnyitásakor kinézett. Billentyűvel: Ctrl+Z.",
+          "Az Újra gomb a visszavonást vonja vissza. Csak azután válik aktívvá, hogy legalább egyszer visszavontál valamit. Billentyűvel: Ctrl+Y (vagy Ctrl+Shift+Z). Ha a visszavonás után új szerkesztést kezdesz, a visszavont lépések elvesznek, az Újra gomb újra szürke lesz.",
+          "A visszavonás a teljes programra vonatkozik: a szimbólumokra, az eljárásokra, a struktúrákra, a megjegyzésekre és a töréspontokra is, bármelyik lapon szerkesztetted őket. Új program kezdésekor, megnyitásakor vagy példa betöltésekor a lépések előzménye üresen indul, és a futó program leáll."
+        ]
+      },
+      {
         "title": "Jobb egérgomb: menü, kivágás és beillesztés",
         "content": [
           [
@@ -272,12 +286,13 @@
         ]
       },
       {
-        "title": "Megjegyzés több szimbólumhoz, összecsukás",
+        "title": "Kijelölés, összecsukás, megjegyzés",
         "content": [
           [
-            "Ctrl + kattintással jelölheted ki a szimbólumokat (szaggatott kék keret); újabb Ctrl + kattintással kiveheted őket a kijelölésből. Az Esc vagy egy kattintás az üres területre megszünteti a kijelölést.",
-            "Jobb kattintás egy kijelölt szimbólumon, majd „Megjegyzés a kijelöltekhez…” (vagy bármelyik szimbólumon „Megjegyzés hozzáfűzése…”): a megjegyzésed egy jegyzetlapon a szakasz elejére kerül, alatta egy pötty, a szakasz végén, a kimenő nyílon pedig a párja.",
-            "Bármelyik pöttyre kattintva a két pötty egyesül, és elrejti a köztük lévő szimbólumokat (mint a C# #region-je), pl. a deklarációkat; az egyesült pöttyre kattintva újra kinyílik. A jegyzetlapra kattintva szerkesztheted a megjegyzést; jobb kattintással összecsukhatod, kinyithatod, törölheted a megjegyzést (a szimbólumok megmaradnak) vagy a teljes szakaszt.",
+            "Kijelölés: jobb egérgombbal húzz egy téglalapot az üres területen – minden szimbólum kijelölődik, amelyet a téglalap érint, és elengedéskor feljön a menü. Ctrl + kattintással is kijelölhetsz (újabb Ctrl + kattintással kiveheted a kijelölésből). A bal egérgombos húzás továbbra is a vásznat görgeti; az Esc vagy egy kattintás az üres területre megszünteti a kijelölést.",
+            "Összecsukás…: a menüből választva kis ablak nyílik. A megjegyzés (a szakasz neve) előre ki van töltve, pl. „3 szimbólum”, és kijelölve, így rögtön átírhatod, pl. „Itt deklaráltunk három változót”. Az „Összecsukva” négyzet be van jelölve: az Enter azonnal összecsukja a szakaszt. Egyetlen szimbólum jobb gombos menüjében is megtalálod.",
+            "A szakasz elején egy jegyzetlapon áll a megjegyzés, alatta egy − jelű kör, a szakasz végén pedig egy ugyanilyen kör a „vége: …” felirattal. A − jelre kattintva a szakasz összecsukódik (mint a C# #region-je): a jegyzetlap kötegként látszik, alatta egy + jelű kör és a „3 szimbólum elrejtve” felirat; a + jelre kattintva újra kinyílik.",
+            "A jegyzetlapra kattintva szerkesztheted a megjegyzést; jobb kattintással összecsukhatod, kinyithatod, törölheted a megjegyzést (a szimbólumok megmaradnak) vagy a teljes szakaszt.",
             "A szakasz úgy fut, mintha a szimbólumai állnának a helyén. A generált kódban megjegyzés lesz belőle (C#-ban #region).",
             "Kipróbálható példa: az Új ablak Alapok csoportjában a „Megjegyzések, összecsukható szakaszok” program."
           ]
@@ -758,7 +773,7 @@
       "Új:": "Új: üres programot kezd (dolgozatüzemmódban nincsenek beépített példák).",
       "Frissítés:": "Dolgozatüzemmód: ez a telepített, internet nélkül működő változat dolgozatokhoz és vizsgákhoz. Nincsenek benne beépített példák, és nem keres frissítést.",
       "Mentés:": "Mentés: .flow fájlba. Megnyitás: .flow fájl vagy a Flowgorithm programmal készült .fprg fájl (ha olyasmit tartalmaz, amit az alkalmazás nem ismer, pl. teknőcgrafikát, arról üzenetet kapsz). A megnyitott program bezáráskor is megmarad, a következő indításkor visszajön.",
-      "Kipróbálható példa:": "Próbáld ki: jelölj ki néhány szimbólumot Ctrl + kattintással, majd kattints jobb gombbal az egyikre, és válaszd a „Megjegyzés a kijelöltekhez…” menüpontot.",
+      "Kipróbálható példa:": "Próbáld ki: jobb egérgombbal húzz egy téglalapot néhány szimbólum köré, majd válaszd az „Összecsukás…” menüpontot.",
       "Mentés, példák, forráskód": "Mentés, forráskód"
     },
     "offlineReplacements": {
@@ -793,29 +808,12 @@
       },
       "exe": {
         "label": "Windows · .exe telepítő",
-        "note": "ha a SmartScreen figyelmeztet, kattints a „További információ”, majd a „Futtatás mindenképp” gombra"
-      },
-      "msi": {
-        "label": "Windows · .msi csomag",
-        "note": "iskolai gépekre, rendszergazdáknak: csendes vagy központi telepítés, pl. msiexec /i {file} /qn"
+        "note": "ha a SmartScreen figyelmeztet, kattints a „További információ”, majd a „Futtatás mindenképp” gombra; iskolai gépekre, rendszergazdáknak csendes telepítés: {file} /S"
       },
       "offline": {
         "title": "Offline változat példákkal ({version} verzió)",
-        "lead": "Telepíthető asztali változat órákra és otthoni gyakorláshoz. Ugyanaz a Folyáb, mint itt a böngészőben, a példákkal együtt, de:",
-        "points": [
-          {
-            "title": "Példákkal",
-            "text": "benne vannak a beépített példák, a tankönyvi példák is"
-          },
-          {
-            "title": "Offline",
-            "text": "internetkapcsolat nélkül fut, semmit nem tölt le, és nem is keres frissítést"
-          },
-          {
-            "title": "Nem vizsgára",
-            "text": "dolgozathoz és érettségihez a fenti, példák nélküli vizsgaváltozatot használd"
-          }
-        ],
+        "lead": "Telepíthető asztali változat órákra és otthoni gyakorláshoz. Ugyanaz a Folyáb, mint itt a böngészőben, a példákkal együtt, de offline használható.",
+        "points": [],
         "appImage": {
           "label": "Linux · AppImage",
           "note": "telepítés nélkül, bármely disztribúción: futtathatóvá kell tenni (chmod +x), majd elindítani"

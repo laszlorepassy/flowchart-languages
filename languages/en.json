@@ -14,6 +14,8 @@
     "menuOpen": "Open…",
     "menuSave": "Save",
     "menuSaveAs": "Save As…",
+    "menuUndo": "Undo (Ctrl+Z)",
+    "menuRedo": "Redo (Ctrl+Y)",
     "menuExportImage": "Export Image",
     "generateCode": "Generate Source Code",
     "programNamePlaceholder": "Program name",
@@ -174,8 +176,13 @@
     "blockFilewrite": "Write to File",
     "blockFileclose": "Close File",
     "blockRegion": "Commented Section",
-    "regionNew": "Comment on the selection…",
-    "regionNewHint": "The symbols (the selected ones and everything between them) get a note with this comment before them, a dot below it, and its pair at the end. Click either dot to collapse the section.",
+    "regionDefaultText": "{count} symbols",
+    "regionCollapseMenu": "Collapse…",
+    "regionDialogTitle": "Collapse",
+    "labelComment": "Comment (the section's name)",
+    "regionHiddenLabel": "{count} symbols hidden",
+    "regionEndLabel": "end: {text}",
+    "regionNewHint": "The symbols (and those between them) go into a section: the comment on top, − collapses it, + expands it. Click the comment to change it later.",
     "regionRemove": "Remove comment",
     "confirmRemoveRegion": "Remove this comment? The symbols stay.",
     "confirmDeleteRegion": "Delete the section together with its symbols?",
@@ -186,7 +193,6 @@
     "regionEditHint": "Click to edit the comment",
     "selectionClear": "Clear the selection",
     "menuCut": "Cut",
-    "regionNewOne": "Add a comment…",
     "breakpointSet": "Set breakpoint",
     "breakpointRemove": "Remove breakpoint",
     "fileOpenShort": "Open",
@@ -261,6 +267,14 @@
         ]
       },
       {
+        "title": "Undo and redo",
+        "content": [
+          "In the header, between Save and Export Image, are the Undo button (the arrow curving back) and, next to it, Redo. Undo brings back the previous state of the flowchart, and it goes back many steps — all the way to how the program looked when it was opened. Keyboard: Ctrl+Z.",
+          "Redo undoes the undo. It only becomes active once you have undone something. Keyboard: Ctrl+Y (or Ctrl+Shift+Z). If you start editing again after an undo, the undone steps are gone and Redo goes grey again.",
+          "Undo covers the whole program: symbols, procedures, structs, comments and breakpoints, on whichever tab you edited them. Starting a new program, opening one or loading an example begins with an empty history, and stops a running program."
+        ]
+      },
+      {
         "title": "Right-click menu, cut and paste",
         "content": [
           [
@@ -272,12 +286,13 @@
         ]
       },
       {
-        "title": "Commenting and collapsing groups of symbols",
+        "title": "Selecting, collapsing, commenting",
         "content": [
           [
-            "Ctrl + click symbols to select them (a dashed blue outline); Ctrl + click a selected symbol again to deselect it. Esc or clicking an empty area clears the selection.",
-            "Right-click a selected symbol and choose \"Comment on the selection…\" (or any symbol and \"Add a comment…\"): your comment goes on a note at the start of the section, with a dot below it, and the dot's pair goes on the arrow at the end of the section.",
-            "Click either dot and the two dots join, hiding the symbols between them (like #region in C#), e.g. the declarations; click the joined dot to expand it again. Click the note to edit the comment; right-click it to collapse, expand, remove the comment (the symbols stay) or delete the whole section.",
+            "Selecting: drag a rectangle with the right mouse button on an empty area – every symbol it touches gets selected, and the menu opens when you release the button. Ctrl + click selects too (Ctrl + click again to deselect). Dragging with the left button still scrolls the canvas; Esc or clicking an empty area clears the selection.",
+            "Collapse…: chosen from the menu, it opens a small dialog. The comment (the section's name) is filled in, e.g. \"3 symbols\", and selected, so you can type over it at once, e.g. \"Here we declared three variables\". \"Collapsed\" is ticked: Enter collapses the section at once. A single symbol's right-click menu has it too.",
+            "The comment stands on a note at the start of the section, with a round − button below it, and another one at the end, labelled \"end: …\". Click − to collapse the section (like #region in C#): the note shows as a stack, with a round + button and \"3 symbols hidden\" below it; click + to expand it again.",
+            "Click the note to edit the comment; right-click it to collapse, expand, remove the comment (the symbols stay) or delete the whole section.",
             "A collapsed section runs exactly as its symbols would. In the generated code it is a comment (in C#, a #region).",
             "An example to try: the \"Comments, collapsible sections\" program in the Basics group of the New dialog."
           ]
@@ -758,7 +773,7 @@
       "New:": "New: starts an empty program (the exam edition has no built-in examples).",
       "Updates:": "Exam edition: this installed edition is for tests and exams and works without an internet connection. It has no built-in examples and never looks for updates.",
       "Save:": "Save: to a .flow file. Open: a .flow file, or a .fprg file made with Flowgorithm (anything the app doesn't support, e.g. turtle graphics, is reported). The open program is also kept when the app is closed and reopens the next time you start it.",
-      "An example to try:": "Try it: select a few symbols with Ctrl + click, then right-click one of them and choose \"Comment on the selection…\".",
+      "An example to try:": "Try it: drag a rectangle around a few symbols with the right mouse button, then choose \"Collapse…\".",
       "Saving, examples, source code": "Saving, source code"
     },
     "offlineReplacements": {
@@ -793,29 +808,12 @@
       },
       "exe": {
         "label": "Windows · .exe installer",
-        "note": "if SmartScreen warns you, click \"More info\", then \"Run anyway\""
-      },
-      "msi": {
-        "label": "Windows · .msi package",
-        "note": "for school machines and administrators: silent or centrally managed installation, e.g. msiexec /i {file} /qn"
+        "note": "if SmartScreen warns you, click \"More info\", then \"Run anyway\"; for school machines, administrators can install it silently: {file} /S"
       },
       "offline": {
         "title": "Offline edition with examples (version {version})",
-        "lead": "An installable desktop edition for lessons and practice at home. The same Folyab as here in the browser, examples included, but:",
-        "points": [
-          {
-            "title": "With examples",
-            "text": "all the built-in examples are included, the textbook examples too"
-          },
-          {
-            "title": "Offline",
-            "text": "runs without an internet connection, downloads nothing and never looks for updates"
-          },
-          {
-            "title": "Not for exams",
-            "text": "for tests and exams, use the exam edition above, which has no examples"
-          }
-        ],
+        "lead": "An installable desktop edition for lessons and practice at home. The same Folyab as here in the browser, examples included, but usable offline.",
+        "points": [],
         "appImage": {
           "label": "Linux · AppImage",
           "note": "no installation, any distribution: make it executable (chmod +x), then run it"
