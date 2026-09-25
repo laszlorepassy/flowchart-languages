@@ -128,6 +128,7 @@
     "errNotAFunction": "\"{name}\" is a procedure: it returns no value; call it with a Call symbol.",
     "errStackOverflow": "Too many nested calls (runaway recursion?).",
     "errForStepZero": "The step of a For loop can't be 0.",
+    "errForStepNotInteger": "The step of a For loop must be a whole number when its variable is an Integer (it is {value}).",
     "errInvalidArraySize": "Invalid array size: {value} (allowed: 0 to 1,000,000).",
     "errInvalidNumber": "\"{value}\" is not a number.",
     "errFileNotOpen": "The file \"{name}\" is not open (use an Open File symbol first).",
@@ -248,7 +249,10 @@
     "pausedAtBreakpoint": "Stopped at a breakpoint.",
     "examplesTitle": "New program",
     "examplesIntro": "Pick an example: it opens as a program you can edit and extend like your own.",
-    "confirmLoadExample": "Load this example? The current program will be replaced (unsaved changes will be lost)."
+    "examplesContents": "Contents",
+    "confirmLoadExample": "Load this example? The current program will be replaced (unsaved changes will be lost).",
+    "confirmOpenProgram": "Open a program from a file? It replaces the current program (unsaved changes will be lost).",
+    "runStoppedByEdit": "The program was changed, so the run stopped. Run starts it again from the beginning."
   },
   "help": {
     "sections": [
@@ -359,6 +363,7 @@
             "During a run, the program stops at a breakpoint before executing that symbol, and switches to the Variables tab.",
             "Variables changed by the last step are highlighted in yellow.",
             "Continue step by step (⏭) or to the next breakpoint (▶).",
+            "If you edit the program while it is stopped (other than its breakpoints), the run stops, and Run starts it again from the beginning.",
             "Breakpoint symbol (as in Flowgorithm): the run stops when it gets there — with a condition (e.g. i = 4), only when the condition is true.",
             "On a runtime error, the symbol that caused it is highlighted and the message appears in the console."
           ]
@@ -373,7 +378,8 @@
             "Save: to a .flow file. Open: a .flow file, or a .fprg file made with Flowgorithm (anything the app doesn't support, e.g. turtle graphics, is reported). Your program is also kept in this browser.",
             "Updates: when a new version of the app comes out, the page updates itself as soon as no program is running and no dialog is open — the open program and the view are kept.",
             "The buttons in the header are icon-only (New, Open, Save, Export Image, then the run controls): hover over one to see which is which. Export Image makes a PNG image of the flowchart.",
-            "New: the dialog shown at start — an empty project or ready-made examples (examples from the Hungarian Digital Culture textbooks, algorithms, structs, files); a loaded example can be edited and extended as if you had written it.",
+            "New: the dialog shown at start — an empty project or ready-made examples (examples from the Hungarian Digital Culture textbooks, lesson by lesson, algorithms, structs, files); the table of contents at its top jumps to a heading. A loaded example can be edited and extended as if you had written it.",
+            "Every example has its own link: once it is loaded, the address bar shows ?example=… with the example's readable name (for example ?example=grade9-our-first-program-how-old-are-you), and sharing that link opens the example directly. After the first edit the link leaves the address bar, so a reload brings back the edited program.",
             "The Code tab generates Python, C++ or C# source code from the program — highlighted, with line numbers; Enlarge shows it in a big window.",
             "Pseudocode writes the program in the app's language: in English, the pseudocode of Cambridge International AS & A Level Computer Science (DECLARE, IF … THEN … ENDIF, FOR … NEXT, PROCEDURE, FUNCTION … RETURNS); in Hungarian, the mondatszerű leírás taught at ELTE. Arrays and strings are indexed from 0 here too, as in the flowchart."
           ]
@@ -801,10 +807,6 @@
       "appImage": {
         "label": "Linux · AppImage",
         "note": "no installation, any distribution: make it executable (chmod +x), then run it"
-      },
-      "deb": {
-        "label": "Linux · .deb package",
-        "note": "Debian, Ubuntu, Linux Mint: sudo apt install ./{file}"
       },
       "exe": {
         "label": "Windows · .exe installer",

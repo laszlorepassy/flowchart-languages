@@ -128,6 +128,7 @@
     "errNotAFunction": "A(z) \"{name}\" eljárás: nincs visszatérési értéke, a Hívás szimbólummal hívd meg.",
     "errStackOverflow": "Túl sok egymásba ágyazott hívás (végtelen rekurzió?).",
     "errForStepZero": "A számlálós ciklus lépésköze nem lehet 0.",
+    "errForStepNotInteger": "A számlálós ciklus lépésközének egész számnak kell lennie, ha a ciklusváltozó Integer (most {value}).",
     "errInvalidArraySize": "Érvénytelen tömbméret: {value} (0 és 1 000 000 között).",
     "errInvalidNumber": "A(z) \"{value}\" nem szám.",
     "errFileNotOpen": "A(z) \"{name}\" fájl nincs megnyitva (előbb használj Fájl megnyitása szimbólumot).",
@@ -248,7 +249,10 @@
     "pausedAtBreakpoint": "Megállt egy töréspontnál.",
     "examplesTitle": "Új program",
     "examplesIntro": "Válassz egy példát: a program betöltődik, és ugyanúgy szerkesztheted és folytathatod, mintha te írtad volna.",
-    "confirmLoadExample": "Betöltöd ezt a példát? A jelenlegi program helyére kerül (a nem mentett módosítások elvesznek)."
+    "examplesContents": "Tartalom",
+    "confirmLoadExample": "Betöltöd ezt a példát? A jelenlegi program helyére kerül (a nem mentett módosítások elvesznek).",
+    "confirmOpenProgram": "Megnyitsz egy programot fájlból? A jelenlegi program helyére kerül (a nem mentett módosítások elvesznek).",
+    "runStoppedByEdit": "A program megváltozott, ezért a futás leállt. A Futtatás elölről indítja."
   },
   "help": {
     "sections": [
@@ -359,6 +363,7 @@
             "Futtatáskor a program megáll a töréspontnál, mielőtt végrehajtaná az adott szimbólumot, és a Változók fülre vált.",
             "A legutóbbi lépésben megváltozott változók sárga háttérrel látszanak.",
             "Innen folytathatod lépésenként (⏭) vagy a következő töréspontig (▶).",
+            "Ha megállás közben a programot szerkeszted (a töréspontok kivételével), a futás leáll, és a Futtatás elölről indítja.",
             "Töréspont szimbólum (mint a Flowgorithmban): a futás megáll, amikor ideér – ha feltételt adsz meg (pl. i = 4), csak akkor, ha a feltétel igaz.",
             "Futásidejű hibánál a hibát okozó szimbólum ki van emelve, a hibaüzenet pedig a konzolon olvasható."
           ]
@@ -373,7 +378,8 @@
             "Mentés: .flow fájlba. Megnyitás: .flow fájl vagy a Flowgorithm programmal készült .fprg fájl (ha olyasmit tartalmaz, amit az alkalmazás nem ismer, pl. teknőcgrafikát, arról üzenetet kapsz). A program a böngészőben is megmarad.",
             "Frissítés: ha közben megjelenik az alkalmazás új verziója, az oldal magától frissül, amint épp nem fut program és nincs nyitva ablak – a megnyitott program és a nézet megmarad.",
             "A fejléc gombjai ikongombok (Új, Megnyitás, Mentés, Kép exportálása, majd a futtatás gombjai): ha az egeret föléjük viszed, kiírják, melyik melyik. A Kép exportálása PNG-képet készít a folyamatábráról.",
-            "Új: az induláskor megjelenő ablak – üres projekt vagy kész példák (a Digitális kultúra 9. és 10. tankönyv, valamint az emelt szintű okosgyűjtemény példái, programozási tételek, struktúrák, fájlkezelés); a betöltött program ugyanúgy szerkeszthető és folytatható, mintha te írtad volna.",
+            "Új: az induláskor megjelenő ablak – üres projekt vagy kész példák (a Digitális kultúra 9., 10. és 11. tankönyv, valamint az emelt szintű okosgyűjtemény példái leckénként, programozási tételek, struktúrák, fájlkezelés); a tetején lévő tartalomjegyzékkel a kívánt címre ugorhatsz. A betöltött program ugyanúgy szerkeszthető és folytatható, mintha te írtad volna.",
+            "Minden példának saját linkje van: betöltése után a címsorban ?example=… áll a példa beszédes, angol nevével (például ?example=grade9-our-first-program-how-old-are-you), ezt a linket megosztva a példa közvetlenül nyílik meg. Az első módosítás után a link eltűnik a címsorból, így az újratöltés a módosított programot hozza vissza.",
             "A Kód fülön Python, C++ vagy C# forráskódot generálhatsz a programból – színezve, sorszámozva; a Nagyítás gombbal nagy ablakban is megnézheted.",
             "A Pszeudokód az alkalmazás nyelvén írja le a programot: magyarul az ELTE-n tanított mondatszerű leírással (Program:, Változó x:Egész, Ha … akkor … különben … Elágazás vége, Ciklus i=1-től N-ig, Eljárás, Függvény), angolul a Cambridge International pszeudokódjával. A tömbök és a szövegek indexelése itt is 0-tól kezdődik, mint a folyamatábrán."
           ]
@@ -801,10 +807,6 @@
       "appImage": {
         "label": "Linux · AppImage",
         "note": "telepítés nélkül, bármely disztribúción: futtathatóvá kell tenni (chmod +x), majd elindítani"
-      },
-      "deb": {
-        "label": "Linux · .deb csomag",
-        "note": "Debian, Ubuntu, Linux Mint: sudo apt install ./{file}"
       },
       "exe": {
         "label": "Windows · .exe telepítő",

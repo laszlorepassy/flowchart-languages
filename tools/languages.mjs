@@ -19,7 +19,7 @@ import { fileURLToPath } from 'url';
 export const REFERENCE = 'en';
 const CODE_RE = /^[a-z]{2,3}(-[A-Z]{2})?$/;
 const PLACEHOLDER_RE = /\{([A-Za-z][A-Za-z0-9]*)\}/g;
-const DOWNLOAD_KINDS = ['appImage', 'deb', 'exe'];
+const DOWNLOAD_KINDS = ['appImage', 'exe'];
 
 /** The {placeholders} of a text, sorted and without repeats. */
 export function placeholders(text) {
